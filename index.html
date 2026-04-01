@@ -277,7 +277,8 @@ canvas#porter-chart{max-width:400px}
   <div class="logo-badge">BDZ</div>
   <span class="logo-title">Strategic Navigator</span>
   <span id="cname">— nuova sessione —</span>
-  <button id="ai-cfg-btn" onclick="openSettings()" title="Configura AI" style="display:flex;align-items:center;gap:6px;padding:5px 12px;height:34px;border:1.5px solid var(--g200);background:var(--wh);border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;color:var(--nv);transition:var(--tr);font-family:inherit">
+  <button id="ai-cfg-btn" onclick="openSettings()" title="Impostazioni AI e Reset sessione" style="display:flex;align-items:center;gap:6px;padding:5px 12px;height:34px;border:1.5px solid var(--g200);background:var(--wh);border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;color:var(--nv);transition:var(--tr);font-family:inherit">
+    <span style="font-size:14px">⚙️</span>
     <span id="ai-status-dot" style="width:8px;height:8px;border-radius:50%;background:var(--g300);flex-shrink:0"></span>
     <span id="ai-status-lbl">AI</span>
   </button>
@@ -883,6 +884,23 @@ canvas#porter-chart{max-width:400px}
       <button class="btn btn-o" onclick="closeSettings()">Annulla</button>
     </div>
     <div id="test-result" style="margin-top:12px;font-size:12.5px;display:none"></div>
+    
+    <!-- RESET SESSIONE -->
+    <div style="margin-top:24px;padding-top:18px;border-top:1.5px solid var(--g200)">
+      <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--g500);margin-bottom:10px">Gestione Dati Sessione</div>
+      <div class="info-box" style="margin-bottom:12px;background:#fef2f2;border-color:#fecaca;color:#991b1b">
+        ⚠️ Il reset cancella <strong>tutti i dati</strong> compilati in questa sessione (azienda, SWOT, Porter, clima, BSC...). 
+        L'operazione è irreversibile. Esegui prima un <strong>backup JSON</strong> se vuoi conservare i dati.
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <button class="btn btn-o btn-sm" onclick="backupPrimaDelReset()" style="border-color:var(--nv);color:var(--nv)">
+          💾 Backup JSON prima
+        </button>
+        <button class="btn btn-d" onclick="resetSessione()" style="font-size:12.5px">
+          🗑 Reset — nuova sessione
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -3414,6 +3432,44 @@ function climaPopulaSwot(){
   setTimeout(function(){go(6);},800);
 }
 // ===== FINE CLIMA IMPORT =====
+
+// ===== RESET SESSIONE =====
+function backupPrimaDelReset(){
+  // Usa la funzione exportJSON già esistente nel file
+  const btn = document.getElementById('imp-file');
+  // Trova e chiama exportJSON se esiste, altrimenti crea il backup manualmente
+  const blob = new Blob([JSON.stringify({data:D, settings:SETTINGS}, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  const az = D.meta.azienda ? D.meta.azienda.replace(/\s+/g,'_').toLowerCase() : 'sessione';
+  a.download = `backup_navigator_${az}_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  setTimeout(()=>{
+    toast('Backup scaricato. Ora puoi fare il reset in sicurezza.','ok');
+  }, 500);
+}
+
+function resetSessione(){
+  const az = D.meta.azienda || 'questa sessione';
+  const conf = confirm(
+    'ATTENZIONE\n\n' +
+    'Stai per cancellare tutti i dati di: ' + az + '\n\n' +
+    'Questa operazione non può essere annullata.\n\n' +
+    'Hai già fatto il backup JSON? Se no, clicca ANNULLA e fai prima il backup.\n\n' +
+    'Clicca OK per procedere con il reset.'
+  );
+  if(!conf) return;
+  // Rimuove solo i dati del Navigator, non le impostazioni AI
+  const keysToRemove = [];
+  for(let i=0; i<localStorage.length; i++){
+    const k = localStorage.key(i);
+    if(k && k !== 'sn_settings') keysToRemove.push(k);
+  }
+  keysToRemove.forEach(k => localStorage.removeItem(k));
+  toast('Sessione azzerata. Ricarico...','ok');
+  setTimeout(()=>{ location.reload(); }, 1200);
+}
+// ===== FINE RESET =====
 
 // ===== SETTINGS =====
 const GEMINI_MODELS=['gemini-2.0-flash','gemini-1.5-flash','gemini-1.5-pro'];
