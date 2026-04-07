@@ -149,6 +149,54 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 .bsc-row input,.bsc-row textarea{border:1px solid transparent;padding:5px 6px;font-size:12.5px;border-radius:5px;width:100%;background:transparent;font-family:inherit;resize:none}
 .bsc-row input:focus,.bsc-row textarea:focus{border-color:var(--nv);background:var(--wh);box-shadow:0 0 0 2px rgba(15,31,61,.07)}
 
+/* FILIERA DI SETTORE */
+.fil-row{background:var(--wh);border:1.5px solid var(--g200);border-radius:10px;padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:1fr 130px 120px 100px 32px;gap:10px;align-items:center;transition:var(--tr)}
+.fil-row:hover{border-color:var(--nv);box-shadow:0 2px 8px rgba(15,31,61,.08)}
+.fil-row.presidio-pieno{border-left:4px solid var(--ok)}
+.fil-row.presidio-parziale{border-left:4px solid var(--warn)}
+.fil-row.presidio-no{border-left:4px solid var(--g300)}
+.fil-row-name{font-size:13.5px;font-weight:600;color:var(--nv)}
+.fil-row-sub{font-size:11.5px;color:var(--g500);margin-top:3px}
+.fil-badge.pieno{background:#d1fae5;color:#065f46;padding:3px 9px;border-radius:12px;font-size:11px;font-weight:600;display:inline-block}
+.fil-badge.parziale{background:#fef3c7;color:#92400e;padding:3px 9px;border-radius:12px;font-size:11px;font-weight:600;display:inline-block}
+.fil-badge.no{background:var(--g100);color:var(--g500);padding:3px 9px;border-radius:12px;font-size:11px;font-weight:600;display:inline-block}
+.fil-map-wrap{display:flex;align-items:stretch;gap:0;min-width:580px;padding:8px 0}
+.fil-map-fase{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;min-width:88px}
+.fil-map-box{width:100%;padding:10px 4px;text-align:center;border-radius:8px;font-size:11px;font-weight:600;border:2px solid transparent;cursor:default;transition:var(--tr);line-height:1.3}
+.fil-map-box.presidio-pieno{background:#d1fae5;border-color:#10b981;color:#065f46}
+.fil-map-box.presidio-parziale{background:#fef3c7;border-color:#f59e0b;color:#92400e}
+.fil-map-box.presidio-no{background:var(--g100);border-color:var(--g300);color:var(--g500)}
+.fil-map-arrow{color:var(--g300);font-size:20px;display:flex;align-items:flex-start;padding:0 2px;padding-top:16px}
+.fil-map-val{font-size:10px;color:var(--g500);margin-top:5px;font-weight:600}
+.fil-map-make{font-size:10px;margin-top:2px;font-weight:500}
+.fil-map-make.make{color:var(--nv)}
+.fil-map-make.buy{color:var(--g400)}
+
+/* GE-McKINSEY */
+.ge-layout{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+@media(max-width:900px){.ge-layout{grid-template-columns:1fr}}
+.ge-vars-panel{display:flex;flex-direction:column;gap:18px}
+.ge-axis-block{background:var(--g50);border-radius:10px;padding:16px;border:1px solid var(--g200)}
+.ge-axis-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px;display:flex;align-items:center;gap:7px}
+.ge-axis-title.x-axis{color:#3b82f6}
+.ge-axis-title.y-axis{color:#10b981}
+.ge-var-row{display:grid;grid-template-columns:1fr 80px 36px;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--g100)}
+.ge-var-row:last-child{border-bottom:none}
+.ge-var-lbl{font-size:12px;color:var(--g700);line-height:1.3}
+.ge-var-inv{font-size:10px;color:var(--warn);background:#fef3c7;border-radius:4px;padding:1px 5px;margin-left:4px;white-space:nowrap}
+.ge-var-score{font-size:13px;font-weight:700;color:var(--nv);text-align:center}
+.ge-score-box{background:var(--nv);color:var(--gd2);border-radius:8px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.ge-score-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;opacity:.7}
+.ge-score-val{font-size:22px;font-weight:700}
+.ge-matrix-panel{display:flex;flex-direction:column;gap:12px}
+.ge-canvas-wrap{position:relative;width:100%;aspect-ratio:1;max-width:420px;margin:0 auto}
+.ge-rec-box{border-radius:10px;padding:14px 16px;border:2px solid}
+.ge-rec-title{font-size:13px;font-weight:700;margin-bottom:6px}
+.ge-rec-desc{font-size:12.5px;line-height:1.6}
+.ge-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ge-kpi{background:var(--g50);border-radius:8px;padding:10px 12px;text-align:center;border:1px solid var(--g200)}
+.ge-kpi-n{font-size:22px;font-weight:700;color:var(--nv)}
+.ge-kpi-l{font-size:10px;color:var(--g500);margin-top:2px;text-transform:uppercase;letter-spacing:.4px}
 /* CATENA VALORE */
 .cv-row{display:grid;grid-template-columns:160px 140px 1fr;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid var(--g100)}
 .cv-nm{font-size:13px;font-weight:600;color:var(--nv);padding-top:10px;display:flex;align-items:flex-start;gap:7px}
@@ -295,13 +343,14 @@ canvas#porter-chart{max-width:400px}
   <div class="ni" onclick="go(1)"><span class="ni-ico">📐</span><span class="ni-lbl">Definizione Business</span><span class="ni-n">1</span></div>
   <div class="ni" onclick="go(2)"><span class="ni-ico">🌍</span><span class="ni-lbl">Analisi PESTEL</span><span class="ni-n">2</span></div>
   <div class="ni" onclick="go(3)"><span class="ni-ico">⚡</span><span class="ni-lbl">5 Forze di Porter</span><span class="ni-n">3</span></div>
-  <div class="ni" onclick="go(4)"><span class="ni-ico">🔗</span><span class="ni-lbl">Catena del Valore</span><span class="ni-n">4</span></div>
-  <div class="ni" onclick="go(5)"><span class="ni-ico">🎯</span><span class="ni-lbl">FCS & Posizionamento</span><span class="ni-n">5</span></div>
-  <div class="ni" onclick="go(6)"><span class="ni-ico">🔄</span><span class="ni-lbl">Analisi SWOT</span><span class="ni-n">6</span></div>
-  <div class="ni" onclick="go(7)"><span class="ni-ico">😊</span><span class="ni-lbl">Clima Aziendale</span><span class="ni-n">7</span></div>
-  <div class="ni" onclick="go(8)"><span class="ni-ico">🌟</span><span class="ni-lbl">Vision, Mission, Valori</span><span class="ni-n">8</span></div>
-  <div class="ni" onclick="go(9)"><span class="ni-ico">🗺️</span><span class="ni-lbl">Mappa Strategica BSC</span><span class="ni-n">9</span></div>
-  <div class="ni" onclick="go(10)"><span class="ni-ico">📊</span><span class="ni-lbl">Report & Export</span><span class="ni-n">10</span></div>
+  <div class="ni" onclick="go(4)"><span class="ni-ico">🏭</span><span class="ni-lbl">Filiera di Settore</span><span class="ni-n">4</span></div>
+  <div class="ni" onclick="go(5)"><span class="ni-ico">🔗</span><span class="ni-lbl">Catena del Valore</span><span class="ni-n">5</span></div>
+  <div class="ni" onclick="go(6)"><span class="ni-ico">🎯</span><span class="ni-lbl">FCS & Posizionamento</span><span class="ni-n">6</span></div>
+  <div class="ni" onclick="go(7)"><span class="ni-ico">🔄</span><span class="ni-lbl">Analisi SWOT</span><span class="ni-n">7</span></div>
+  <div class="ni" onclick="go(8)"><span class="ni-ico">😊</span><span class="ni-lbl">Clima Aziendale</span><span class="ni-n">8</span></div>
+  <div class="ni" onclick="go(9)"><span class="ni-ico">🌟</span><span class="ni-lbl">Vision, Mission, Valori</span><span class="ni-n">9</span></div>
+  <div class="ni" onclick="go(10)"><span class="ni-ico">🗺️</span><span class="ni-lbl">Mappa Strategica BSC</span><span class="ni-n">10</span></div>
+  <div class="ni" onclick="go(11)"><span class="ni-ico">📊</span><span class="ni-lbl">Report & Export</span><span class="ni-n">11</span></div>
   <div class="sb-foot">
     <div class="sb-pl"><span>Progresso sessione</span><span id="prog-pct">0%</span></div>
     <div class="sb-pb"><div class="sb-pf" id="prog-fill" style="width:0%"></div></div>
@@ -460,20 +509,118 @@ canvas#porter-chart{max-width:400px}
   </div>
   <div class="sec-nav">
     <button class="btn btn-o" onclick="go(2)">← PESTEL</button>
-    <button class="btn btn-p" onclick="go(4)">Avanti: Catena del Valore →</button>
+    <button class="btn btn-p" onclick="go(4)">Avanti: Filiera di Settore →</button>
   </div>
 </div>
 
-<!-- S4: CATENA DEL VALORE -->
+<!-- S4: FILIERA DI SETTORE -->
 <div class="sec" id="s4">
+  <div class="sh">
+    <div class="sh-ico">🏭</div>
+    <div class="sh-txt">
+      <div class="sh-tag">Sessione 4</div>
+      <div class="sh-title">Filiera di Settore</div>
+      <div class="sh-desc">Posizionamento dell'impresa nella catena verticale del settore: dalla materia prima al cliente finale. Analisi del valore per fase, grado di integrazione verticale e potere contrattuale.</div>
+    </div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(4)">✨ AI Filiera</button></div>
+  </div>
+
+  <!-- MAPPA VISIVA FILIERA -->
+  <div class="card">
+    <div class="ct"><span class="ico">🗺️</span> Mappa della Filiera</div>
+    <div class="info-box" style="margin-bottom:14px">
+      Configura le fasi della filiera specifica del tuo settore. Per ogni fase indica: se l'azienda <strong>presidia</strong> quella fase, se le attività sono <strong>interne o esternalizzate</strong> e la quota di <strong>valore / margine</strong> che si concentra lì.
+    </div>
+    <div id="fil-map-svg" style="overflow-x:auto;margin-bottom:18px;padding:4px 0"></div>
+    <div id="fil-fasi-list"></div>
+    <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn btn-o btn-sm" onclick="addFilieraFase()">+ Aggiungi Fase</button>
+      <button class="btn btn-o btn-sm" onclick="resetFilieraDefault()">↺ Ripristina default</button>
+      <div id="fil-warn-valore" style="font-size:11px;color:var(--err);margin-top:6px;display:none"></div>
+    </div>
+  </div>
+
+  <!-- GRAFICO CONCENTRAZIONE VALORE -->
+  <div class="card">
+    <div class="ct"><span class="ico">📊</span> Concentrazione del Valore per Fase</div>
+    <p class="ht" style="margin-bottom:12px">Il grafico mostra dove si concentra il margine nella filiera e quale parte presidia la tua azienda. Le fasi presidiate sono evidenziate.</p>
+    <div style="position:relative;height:220px;max-width:700px;margin:0 auto"><canvas id="fil-chart"></canvas></div>
+  </div>
+
+  <!-- POTERE CONTRATTUALE E INTEGRAZIONE -->
+  <div class="card">
+    <div class="ct"><span class="ico">⚖️</span> Potere Contrattuale & Integrazione Verticale</div>
+    <div class="fr" style="align-items:start">
+      <div class="fg">
+        <label>Potere contrattuale UPSTREAM (verso fornitori)</label>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+          <span style="font-size:11px;color:var(--g500);white-space:nowrap">Basso</span>
+          <input type="range" min="1" max="10" value="5" id="fil-pu" oninput="updateFilieraPotere()" style="flex:1">
+          <span style="font-size:11px;color:var(--g500);white-space:nowrap">Alto</span>
+          <span id="fil-pu-val" style="font-weight:700;color:var(--nv);min-width:24px;text-align:center">5</span>
+        </div>
+        <div class="info-box" style="margin-top:8px;font-size:11.5px" id="fil-pu-msg">Equilibrio: dipendenza moderata dai fornitori</div>
+      </div>
+      <div class="fg">
+        <label>Potere contrattuale DOWNSTREAM (verso clienti)</label>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+          <span style="font-size:11px;color:var(--g500);white-space:nowrap">Basso</span>
+          <input type="range" min="1" max="10" value="5" id="fil-pd" oninput="updateFilieraPotere()" style="flex:1">
+          <span style="font-size:11px;color:var(--g500);white-space:nowrap">Alto</span>
+          <span id="fil-pd-val" style="font-weight:700;color:var(--nv);min-width:24px;text-align:center">5</span>
+        </div>
+        <div class="info-box" style="margin-top:8px;font-size:11.5px" id="fil-pd-msg">Equilibrio: discreta capacità di dettare condizioni ai clienti</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px">
+      <div style="background:var(--g50);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--g200)">
+        <div style="font-size:11px;color:var(--g500);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Fasi Presidiate</div>
+        <div id="fil-kpi-pres" style="font-size:28px;font-weight:700;color:var(--nv)">—</div>
+        <div id="fil-kpi-pres-lbl" style="font-size:11px;color:var(--g400);margin-top:2px">su 0 totali</div>
+      </div>
+      <div style="background:var(--g50);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--g200)">
+        <div style="font-size:11px;color:var(--g500);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Integrazione Verticale</div>
+        <div id="fil-kpi-int" style="font-size:28px;font-weight:700;color:var(--nv)">—</div>
+        <div style="font-size:11px;color:var(--g400);margin-top:2px" title="Percentuale di fasi della filiera in cui l'azienda ha presidio pieno o parziale">% fasi presidiate</div>
+      </div>
+      <div style="background:var(--g50);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--g200)">
+        <div style="font-size:11px;color:var(--g500);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Valore Presidiato</div>
+        <div id="fil-kpi-val" style="font-size:28px;font-weight:700;color:var(--nv)">—</div>
+        <div style="font-size:11px;color:var(--g400);margin-top:2px" title="Somma del valore/margine % delle sole fasi presidiate">% margine catturato</div>
+      </div>
+      <div style="background:var(--g50);border-radius:10px;padding:14px;text-align:center;border:1px solid var(--g200)">
+        <div style="font-size:11px;color:var(--g500);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Make vs Buy</div>
+        <div id="fil-kpi-make" style="font-size:28px;font-weight:700;color:var(--nv)">—</div>
+        <div style="font-size:11px;color:var(--g400);margin-top:2px" title="Tra le fasi presidiate: quante sono gestite internamente (make) vs affidate a terzi (buy)">% internalizzato (su fasi presidiate)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSIONI -->
+  <div class="card">
+    <div class="ct"><span class="ico">📝</span> Analisi Strategica della Filiera</div>
+    <div class="info-box" style="margin-bottom:10px">
+      Interpreta il posizionamento: dove si concentra il potere nella filiera? Quali fasi non presidiate creano dipendenza? Ci sono opportunità di integrazione verticale (a monte o a valle) o di make-or-buy?
+    </div>
+    <textarea id="fil-concl" rows="5" placeholder="es. L'azienda presidia le fasi centrali ad alto valore (produzione e vendita) ma dipende da fornitori oligopolistici a monte. La fase logistica esternalizzata rappresenta un rischio di margine. Nel breve periodo si raccomanda di valutare l'integrazione parziale della logistica..." oninput="save()"></textarea>
+  </div>
+
+  <div class="sec-nav">
+    <button class="btn btn-o" onclick="go(3)">← 5 Forze di Porter</button>
+    <button class="btn btn-p" onclick="go(5)">Avanti: Catena del Valore →</button>
+  </div>
+</div>
+
+<!-- S5: CATENA DEL VALORE -->
+<div class="sec" id="s5">
   <div class="sh">
     <div class="sh-ico">🔗</div>
     <div class="sh-txt">
-      <div class="sh-tag">Sessione 4</div>
+      <div class="sh-tag">Sessione 5</div>
       <div class="sh-title">Catena del Valore</div>
       <div class="sh-desc">Scomposizione dell'impresa in processi primari e attività di supporto. Per ogni processo identifica il responsabile e le criticità principali.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(4)">✨ AI Criticità</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(5)">✨ AI Criticità</button></div>
   </div>
   <div class="card">
     <div class="ct"><span class="ico">⚙️</span> Attività Primarie</div>
@@ -499,21 +646,21 @@ canvas#porter-chart{max-width:400px}
     <div class="add-row"><input type="text" id="critica-in" placeholder="es. Programmazione snella con cambi veloci..."><button class="btn btn-p btn-sm" onclick="addCritica()">+ Attività</button></div>
   </div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(3)">← Porter</button>
-    <button class="btn btn-p" onclick="go(5)">Avanti: FCS →</button>
+    <button class="btn btn-o" onclick="go(4)">← Filiera di Settore</button>
+    <button class="btn btn-p" onclick="go(6)">Avanti: FCS →</button>
   </div>
 </div>
 
 <!-- S5: FCS & POSIZIONAMENTO -->
-<div class="sec" id="s5">
+<div class="sec" id="s6">
   <div class="sh">
     <div class="sh-ico">🎯</div>
     <div class="sh-txt">
-      <div class="sh-tag">Sessione 5</div>
+      <div class="sh-tag">Sessione 6</div>
       <div class="sh-title">FCS & Posizionamento Competitivo</div>
       <div class="sh-desc">Fattori Critici di Successo del settore e valutazione del posizionamento competitivo rispetto ai principali concorrenti.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(5)">✨ AI FCS</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(6)">✨ AI FCS</button></div>
   </div>
   <div class="card">
     <div class="ct"><span class="ico">&#127942;</span> Fattori Critici di Successo</div>
@@ -547,25 +694,79 @@ canvas#porter-chart{max-width:400px}
     <div class="fcs-matrix"><table class="fcs-tbl" id="fcs-matrix-tbl"><thead><tr><th>FCS / Imp.</th><th id="fcs-self-hd">LA TUA AZIENDA</th></tr></thead><tbody id="fcs-matrix-body"></tbody></table></div>
   </div>
   <div class="card">
-    <div class="ct"><span class="ico">📝</span> Analisi del Posizionamento</div>
-    <textarea id="fcs-concl" rows="4" placeholder="Commenta il posizionamento competitivo: aree di forza, debolezze da colmare, opportunità di differenziazione..." oninput="save()"></textarea>
+    <div class="ct"><span class="ico">📝</span> Analisi del Posizionamento FCS</div>
+    <textarea id="fcs-concl" rows="3" placeholder="Commenta il posizionamento competitivo: aree di forza, debolezze da colmare, opportunità di differenziazione..." oninput="save()"></textarea>
   </div>
+
+  <!-- GE-McKINSEY -->
+  <div class="card" style="margin-top:4px">
+    <div class="ct" style="margin-bottom:4px"><span class="ico">🎯</span> Matrice GE-McKinsey — Posizionamento Strategico
+      <button class="ai-btn" onclick="aiSection(6)" style="margin-left:auto;font-size:11.5px">✨ AI McKinsey</button>
+    </div>
+    <div class="info-box" style="margin-bottom:16px">
+      La matrice GE-McKinsey valuta l'impresa su 2 assi ponderati: <strong>Attrattività del Settore</strong> (dati oggettivi di mercato) e <strong>Capacità Competitiva</strong> (forza relativa dell'azienda). Il posizionamento nelle 9 celle determina la strategia raccomandata. Le variabili inverse (↓) riducono il punteggio quando il valore è alto — es. alta intensità competitiva abbassa l'attrattività.
+    </div>
+    <div style="margin-bottom:14px">
+      <label style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--g500)">Nome Business Unit / Linea di prodotto</label>
+      <input type="text" id="ge-sbu-nome" placeholder="es. Linea Premium, Business Unit Horeca, Prodotto X..." style="max-width:360px;margin-top:5px" oninput="D.ge.sbuNome=this.value;save()">
+    </div>
+    <div class="ge-layout">
+      <!-- PANNELLO VARIABILI -->
+      <div class="ge-vars-panel">
+        <div class="ge-axis-block">
+          <div class="ge-axis-title x-axis">📊 Asse X — Attrattività del Settore</div>
+          <div id="ge-vars-a"></div>
+          <div class="ge-score-box" style="background:#1e3a5f">
+            <div><div class="ge-score-lbl">Score Attrattività</div><div style="font-size:11px;opacity:.5;margin-top:2px">Somma pesata 1–5</div></div>
+            <div class="ge-score-val" id="ge-score-a">—</div>
+          </div>
+        </div>
+        <div class="ge-axis-block">
+          <div class="ge-axis-title y-axis">💪 Asse Y — Capacità Competitiva</div>
+          <div id="ge-vars-c"></div>
+          <div class="ge-score-box" style="background:#065f46">
+            <div><div class="ge-score-lbl">Score Capacità</div><div style="font-size:11px;opacity:.5;margin-top:2px">Somma pesata 1–5</div></div>
+            <div class="ge-score-val" id="ge-score-c">—</div>
+          </div>
+        </div>
+      </div>
+      <!-- MATRICE + RACCOMANDAZIONE -->
+      <div class="ge-matrix-panel">
+        <div class="ge-canvas-wrap">
+          <canvas id="ge-canvas"></canvas>
+        </div>
+        <div class="ge-kpi-grid">
+          <div class="ge-kpi"><div class="ge-kpi-n" id="ge-kpi-a">—</div><div class="ge-kpi-l">Attrattività Settore</div></div>
+          <div class="ge-kpi"><div class="ge-kpi-n" id="ge-kpi-c">—</div><div class="ge-kpi-l">Capacità Competitiva</div></div>
+        </div>
+        <div class="ge-rec-box" id="ge-rec-box" style="border-color:var(--g300);background:var(--g50)">
+          <div class="ge-rec-title" id="ge-rec-title">—</div>
+          <div class="ge-rec-desc" id="ge-rec-desc">Inserisci i valori sulle variabili per calcolare il posizionamento.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="ct" style="margin-bottom:8px"><span class="ico">📝</span> Interpretazione Strategica</div>
+      <textarea id="ge-concl" rows="4" placeholder="Commenta il posizionamento McKinsey: implicazioni strategiche, confronto con la posizione attuale, priorità di azione..." oninput="D.ge.conclusioni=this.value;save()"></textarea>
+    </div>
+  </div>
+
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(4)">← Catena del Valore</button>
-    <button class="btn btn-p" onclick="go(6)">Avanti: SWOT →</button>
+    <button class="btn btn-o" onclick="go(5)">← Catena del Valore</button>
+    <button class="btn btn-p" onclick="go(7)">Avanti: SWOT →</button>
   </div>
 </div>
 
 <!-- S6: SWOT -->
-<div class="sec" id="s6">
+<div class="sec" id="s7">
   <div class="sh">
     <div class="sh-ico">🔄</div>
     <div class="sh-txt">
-      <div class="sh-tag">Sessione 6</div>
+      <div class="sh-tag">Sessione 7</div>
       <div class="sh-title">Analisi SWOT</div>
       <div class="sh-desc">Sintesi strategica: Punti di Forza (Strengths), Debolezze (Weaknesses), Opportunità (Opportunities), Minacce (Threats) → 4 Strategie di risposta.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(6)">✨ Genera Strategie</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(7)">✨ Genera Strategie</button></div>
   </div>
   <div class="swot-grid">
     <div class="swot-box S"><div class="swot-title">💪 Punti di Forza (Strengths)</div><div id="sw-S"></div><div class="add-row"><input type="text" id="sw-S-in" placeholder="Aggiungi forza..." onkeydown="swotEnter(event,'S')"><button class="btn btn-o btn-sm" onclick="addSwot('S')">+</button></div></div>
@@ -586,13 +787,13 @@ canvas#porter-chart{max-width:400px}
     </div>
   </div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(5)">← FCS</button>
-    <button class="btn btn-p" onclick="go(7)">Avanti: Clima →</button>
+    <button class="btn btn-o" onclick="go(6)">← FCS</button>
+    <button class="btn btn-p" onclick="go(8)">Avanti: Clima →</button>
   </div>
 </div>
 
 <!-- S7: CLIMA AZIENDALE -->
-<div class="sec" id="s7">
+<div class="sec" id="s8">
   <div class="sh">
     <div class="sh-ico">😊</div>
     <div class="sh-txt">
@@ -600,7 +801,7 @@ canvas#porter-chart{max-width:400px}
       <div class="sh-title">Clima Aziendale</div>
       <div class="sh-desc">Questionario di autovalutazione sul clima organizzativo. Da somministrare ai dipendenti (anonimo) o compilare insieme alla direzione per una stima iniziale.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(7)">✨ AI Analisi Clima</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(8)">✨ AI Analisi Clima</button></div>
   </div>
 
   <!-- IMPORT JSON -->
@@ -629,7 +830,7 @@ canvas#porter-chart{max-width:400px}
     <div class="ct" style="margin-bottom:8px"><span class="ico">📈</span> Punteggi per Dimensione</div>
     <div id="clima-dim-bars"></div>
     <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-      <button class="ai-btn" onclick="aiSection(7)">✨ AI Analisi Psicologica</button>
+      <button class="ai-btn" onclick="aiSection(8)">✨ AI Analisi Psicologica</button>
       <button class="btn btn-o" onclick="climaPopulaSwot()">🎯 Popola SWOT</button>
     </div>
     <!-- Risultato AI strutturato -->
@@ -707,21 +908,21 @@ canvas#porter-chart{max-width:400px}
     </div>
   </div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(6)">← SWOT</button>
-    <button class="btn btn-p" onclick="go(8)">Avanti: Vision →</button>
+    <button class="btn btn-o" onclick="go(7)">← SWOT</button>
+    <button class="btn btn-p" onclick="go(9)">Avanti: Vision →</button>
   </div>
 </div>
 
 <!-- S8: VISION MISSION VALORI -->
-<div class="sec" id="s8">
+<div class="sec" id="s9">
   <div class="sh">
     <div class="sh-ico">🌟</div>
     <div class="sh-txt">
-      <div class="sh-tag">Sessione 8</div>
+      <div class="sh-tag">Sessione 9</div>
       <div class="sh-title">Vision, Mission & Valori</div>
       <div class="sh-desc">Definizione dell'identità strategica: dove vogliamo essere (Vision), come ci proponiamo di arrivarci (Mission), e i principi guida che qualificano l'impresa.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(8)">✨ Genera con AI</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(9)">✨ Genera con AI</button></div>
   </div>
   <div class="card">
     <div class="ct"><span class="ico">🔭</span> Vision</div>
@@ -767,21 +968,21 @@ canvas#porter-chart{max-width:400px}
     </div>
   </div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(7)">← Clima</button>
-    <button class="btn btn-p" onclick="go(9)">Avanti: BSC →</button>
+    <button class="btn btn-o" onclick="go(8)">← Clima</button>
+    <button class="btn btn-p" onclick="go(10)">Avanti: BSC →</button>
   </div>
 </div>
 
 <!-- S9: BSC -->
-<div class="sec" id="s9">
+<div class="sec" id="s10">
   <div class="sh">
     <div class="sh-ico">🗺️</div>
     <div class="sh-txt">
-      <div class="sh-tag">Sessione 9</div>
+      <div class="sh-tag">Sessione 10</div>
       <div class="sh-title">Mappa Strategica — Balanced Scorecard</div>
       <div class="sh-desc">4 prospettive di Kaplan e Norton: Finanziaria, Cliente, Processi Interni, Apprendimento & Crescita. Per ciascuna: obiettivi, KPI, target e azioni.</div>
     </div>
-    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(9)">✨ Popola con AI</button></div>
+    <div class="sh-actions"><button class="ai-btn" onclick="aiSection(10)">✨ Popola con AI</button></div>
   </div>
   <div class="bsc-tab-btns">
     <button class="bsc-tb active" onclick="bscTab(0)">💰 Finanziaria</button>
@@ -796,13 +997,13 @@ canvas#porter-chart{max-width:400px}
     <div id="bsc-3" class="hidden"><div class="card"><div class="ct"><span class="ico">📚</span> Apprendimento & Crescita — In cosa devo migliorare per sostenere i processi?</div><div class="info-box">Capitale umano, informativo e organizzativo. Formazione, digitalizzazione, clima aziendale, innovazione.</div><div class="bsc-hd"><span>Obiettivo</span><span>KPI / Parametro</span><span>Target</span><span>Azioni</span><span>Responsabile</span><span></span></div><div id="bsc-rows-3" class="bsc-rows"></div><button class="btn btn-o btn-sm" style="margin-top:10px" onclick="addBscRow(3)">+ Obiettivo</button></div></div>
   </div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(8)">← Vision</button>
-    <button class="btn btn-p" onclick="go(10)">Avanti: Report →</button>
+    <button class="btn btn-o" onclick="go(9)">← Vision</button>
+    <button class="btn btn-p" onclick="go(11)">Avanti: Report →</button>
   </div>
 </div>
 
 <!-- S10: REPORT -->
-<div class="sec" id="s10">
+<div class="sec" id="s11">
   <div class="sh">
     <div class="sh-ico">📊</div>
     <div class="sh-txt">
@@ -817,7 +1018,7 @@ canvas#porter-chart{max-width:400px}
   </div>
   <div id="report-body"></div>
   <div class="sec-nav">
-    <button class="btn btn-o" onclick="go(9)">← BSC</button>
+    <button class="btn btn-o" onclick="go(10)">← BSC</button>
     <div></div>
   </div>
 </div>
@@ -928,7 +1129,35 @@ const D = {
     supporto:[{n:'Approvvigionamento',r:'',c:''},{n:'Sviluppo Tecnologia / Innovazione',r:'',c:''},{n:'Gestione Risorse Umane',r:'',c:''},{n:'Infrastruttura / Amministrazione',r:'',c:''}],
     vincoli:[],critiche:[]
   },
+  filiera:{fasi:[
+    {nome:'Fornitori / Materie Prime',presidio:'no',makeOrBuy:'buy',valore:20,attori:''},
+    {nome:'Produzione / Trasformazione',presidio:'pieno',makeOrBuy:'make',valore:30,attori:''},
+    {nome:'Logistica & Distribuzione',presidio:'parziale',makeOrBuy:'buy',valore:15,attori:''},
+    {nome:'Vendita / Canale',presidio:'pieno',makeOrBuy:'make',valore:25,attori:''},
+    {nome:'Post Vendita / Servizi',presidio:'no',makeOrBuy:'buy',valore:10,attori:''}
+  ],potereUpstream:5,potereDownstream:5,conclusioni:''},
   fcs:{fattori:[],concorrenti:[],ratings:{},conclusioni:''},
+  ge:{
+    attrattivita:[
+      {k:'dimensioneMercato', l:'Dimensione del mercato',               v:3,p:20,inv:false},
+      {k:'crescitaMercato',   l:'Tasso di crescita del mercato',        v:3,p:20,inv:false},
+      {k:'margineSettore',    l:'Margine di profitto del settore',      v:3,p:15,inv:false},
+      {k:'intensitaComp',     l:'Intensit\u00e0 competitiva',          v:3,p:15,inv:true },
+      {k:'fabbisognoTecn',    l:'Fabbisogno tecnologico',               v:3,p:10,inv:true },
+      {k:'incidenzaInflaz',   l:'Incidenza dell\u2019inflazione',      v:3,p:10,inv:true },
+      {k:'impattoAmbient',    l:'Impatto ambientale / regolatorio',     v:3,p:10,inv:true }
+    ],
+    capacita:[
+      {k:'quotaMercato',      l:'Quota di mercato relativa',            v:3,p:20,inv:false},
+      {k:'crescitaQuota',     l:'Crescita della quota di mercato',      v:3,p:15,inv:false},
+      {k:'qualitaProdotto',   l:'Qualit\u00e0 prodotto / servizio percepita',v:3,p:15,inv:false},
+      {k:'soliditaBrand',     l:'Solidit\u00e0 del brand e reputazione',v:3,p:15,inv:false},
+      {k:'efficienzaOp',      l:'Efficienza operativa vs concorrenti',  v:3,p:15,inv:false},
+      {k:'marginalita',       l:'Marginalit\u00e0 vs media settore',   v:3,p:10,inv:false},
+      {k:'knowHow',           l:'Know-how / tecnologia proprietaria',   v:3,p:10,inv:false}
+    ],
+    scoreA:3,scoreC:3,sbuNome:''
+  },
   swot:{S:[],W:[],O:[],T:[],so:'',wo:'',st:'',wt:''},
   clima:{includi:false,risposte:{},customQs:[],distribuzione:'completo',durataMesi:1,noteDistrib:''},
   vision:{vision:'',mission:'',valori:[],valoriDescrizioni:{},codiceEtico:'',obiettivi:[]},
@@ -974,7 +1203,7 @@ const GUIDE_S0 = [
   {type:"note", text:"Consiglio pratico: scarica la sessione in JSON al termine di ogni incontro. Potrai riprendere esattamente dove hai lasciato nell\'incontro successivo."}
 ];
 
-const GUIDE_S10 = [
+const GUIDE_S11 = [
   {type:"section", text:"Report Finale e Utilizzo con il Cliente"},
   {type:"q", text:"Come usare il report con il cliente:", subs:[
     "Il report PDF \u00e8 il deliverable finale da consegnare alla direzione",
@@ -1114,7 +1343,43 @@ const GUIDE_S3 = [
   {type:'note', text:'Fare un\'analisi comparativa nel tempo dell\'evoluzione delle 5 forze. Come vengono influenzati i concorrenti dalla struttura del settore e dalle dinamiche evolutive?'}
 ];
 
-const GUIDE_S4 = [
+const GUIDE_S4_FILIERA = [
+  {type:'section', text:'Filiera di Settore — Posizionamento Verticale (2° Incontro)'},
+  {type:'note', text:'La filiera di settore (Industry Value Chain) descrive la catena verticale che va dalla materia prima al cliente finale. Mappare dove si coloca l\'azienda aiuta a capire dipendenze, opportunità di integrazione e dove si concentra il potere.'},
+  {type:'q', text:'Come è strutturata la filiera del vostro settore?', subs:[
+    'Quali sono le fasi principali: da dove arrivano le materie prime/input?',
+    'Chi trasforma? Chi distribuisce? Chi vende? Chi assiste il cliente?',
+    'Quanti attori ci sono in ogni fase? Sono concentrati o frammentati?',
+    'Quali fasi sono presidiate da grandi player con potere di mercato?'
+  ]},
+  {type:'q', text:'Dove si posiziona l\'impresa nella filiera?', subs:[
+    'Quante fasi presidia direttamente? (integrazione verticale)',
+    'Quali attività fa internamente (make) e quali affida a terzi (buy)?',
+    'Perché alcune fasi sono esternalizzate? È una scelta strategica o di necessità?',
+    'Come si inquadra rispetto ai principali concorrenti: sono più integrati o meno?'
+  ]},
+  {type:'q', text:'Dove si concentra il valore (margine) nella filiera?', subs:[
+    'Quale fase cattura la quota maggiore di margine?',
+    'L\'azienda presidia le fasi ad alto valore o quelle a basso margine?',
+    'Il valore si sta spostando nella filiera nel tempo? (value migration)',
+    'Ci sono fasi non presidiate che "catturano" margine a danno dell\'azienda?'
+  ]},
+  {type:'q', text:'Qual è il potere contrattuale nella filiera?', subs:[
+    'UPSTREAM: ci sono fornitori alternativi? Quanto dipende da loro? Si può cambiare facilmente?',
+    'DOWNSTREAM: i clienti possono bypassare l\'azienda? Esistono canali alternativi?',
+    'Esistono rischi di integrazione verticale da parte di fornitori o clienti? (disintermediazione)',
+    'Ci sono barriere che proteggono la posizione nella filiera?'
+  ]},
+  {type:'q', text:'Ci sono opportunità di integrazione verticale?', subs:[
+    'Vale la pena internalizzare la fase precedente (integrazione a monte)?',
+    'Vale la pena internalizzare la fase successiva (integrazione a valle)?',
+    'Quali rischi porta l\'integrazione verticale? (investimenti, complessità gestionale)',
+    'Alternative all\'integrazione: joint venture, accordi di lungo periodo, partecipazioni minoritarie'
+  ]},
+  {type:'note', text:'Suggerimento operativo: la mappa della filiera è uno strumento potente da mostrare al cliente. Consente di visualizzare immediatamente dove l\'azienda è forte, dove è dipendente e dove potrebbe crescere. Usarla come base di discussione per le scelte di make-or-buy e per l\'identificazione dei rischi strategici.'}
+];
+
+const GUIDE_S5 = [
   {type:'section', text:'Catena del Valore — Analisi Interna (3° Incontro)'},
   {type:'q', text:'Quali sono le principali funzioni/processi individuati in azienda?', subs:[
     'Seguire la traccia della catena del valore di Porter',
@@ -1159,8 +1424,8 @@ const GUIDE_S4 = [
   ]}
 ];
 
-const GUIDE_S5 = [
-  {type:'section', text:'FCS & Posizionamento Competitivo'},
+const GUIDE_S6 = [
+  {type:'section', text:'FCS & Posizionamento Competitivo + Matrice GE-McKinsey'},
   {type:'q', text:'Quali sono i Fattori Critici di Successo del settore?', subs:[
     'FCS = ciò che è NECESSARIO presidiare per avere successo nel segmento',
     'Sono le variabili oggettive che il cliente usa per scegliere tra fornitori concorrenti',
@@ -1176,10 +1441,37 @@ const GUIDE_S5 = [
     'Variazione % ricavi dell\'impresa / Variazione % somma ricavi settore',
     'La quota di mercato è cresciuta, stabile o diminuita negli ultimi 3 anni?'
   ]},
-  {type:'note', text:'Differenza fondamentale: i FCS sono ciò che il MERCATO vuole (fattori esogeni). Le competenze distintive sono ciò che l\'IMPRESA sa fare (fattori endogeni). Tenerli separati evita di confondere i propri punti di forza con ciò che il cliente ritiene importante.'}
+  {type:'note', text:'Differenza fondamentale: i FCS sono ciò che il MERCATO vuole (fattori esogeni). Le competenze distintive sono ciò che l\'IMPRESA sa fare (fattori endogeni). Tenerli separati evita di confondere i propri punti di forza con ciò che il cliente ritiene importante.'},
+  {type:'section', text:'Matrice GE-McKinsey — Posizionamento Strategico'},
+  {type:'note', text:'La matrice GE-McKinsey posiziona l\'impresa su 2 dimensioni ponderate. Ogni variabile ha un peso % diverso: le variabili "inv." (inverse) penalizzano l\'attrattività quando sono alte (es. alta intensità competitiva = settore meno attrattivo). Il bubble si posiziona nella cella corrispondente.'},
+  {type:'q', text:'ASSE X — Attrattività del Settore: come valuti le condizioni esterne?', subs:[
+    'Dimensione del mercato (20%): grande mercato = più opportunità di crescita',
+    'Tasso di crescita (20%): settore in espansione o in declino?',
+    'Margine di profitto del settore (15%): qual è la redditività media delle aziende del settore?',
+    'Intensità competitiva (15% — inversa): alta concorrenza riduce l\'attrattività',
+    'Fabbisogno tecnologico (10% — inverso): alta complessità tecnologica aumenta barriere e costi',
+    'Incidenza inflazione (10% — inversa): alta inflazione erode i margini',
+    'Impatto ambientale/regolatorio (10% — inverso): vincoli normativi pesanti riducono l\'attrattività'
+  ]},
+  {type:'q', text:'ASSE Y — Capacità Competitiva: come sei posizionato rispetto ai concorrenti?', subs:[
+    'Quota di mercato relativa (20%): sei il leader, un follower o un player marginale?',
+    'Crescita della quota (15%): stai guadagnando o perdendo terreno?',
+    'Qualità prodotto/servizio percepita (15%): come ti valuta il cliente vs concorrenti?',
+    'Solidità del brand (15%): il tuo nome vale qualcosa nel mercato?',
+    'Efficienza operativa (15%): sei più efficiente dei tuoi concorrenti (costi, velocità, qualità)?',
+    'Marginalità vs media settore (10%): guadagni più o meno della media?',
+    'Know-how e tecnologia proprietaria (10%): hai competenze difficilmente replicabili?'
+  ]},
+  {type:'q', text:'Come interpretare il posizionamento nelle 9 celle?', subs:[
+    'INVESTIMENTO E CRESCITA (alta attrattività + alta forza): investire aggressivamente per consolidare la leadership',
+    'CRESCITA SELETTIVA: investire dove si è forti, razionalizzare il resto',
+    'SELETTIVITÀ: difendere le nicchie, non disperdere risorse',
+    'MIETITURA / ABBANDONO: estrarre valore residuo senza reinvestire, valutare uscita'
+  ]},
+  {type:'note', text:'Consiglio operativo: confronta il posizionamento McKinsey con i dati della Filiera di Settore (dove si concentra il margine) e con gli FCS (dove sei forte/debole). Le 3 analisi insieme forniscono una base solida per le decisioni strategiche di investimento/disinvestimento.'}
 ];
 
-const GUIDE_S6 = [
+const GUIDE_S7 = [
   {type:'section', text:'SWOT Analysis (5° Incontro) — Sintesi di tutti gli incontri precedenti'},
   {type:'note', text:'Sulla base delle considerazioni fatte su macro-ambiente (PESTEL), micro-ambiente (Porter), catena del valore e FCS, procedi con la SWOT. Non è un esercizio separato — è la SINTESI di tutto il lavoro fatto.'},
   {type:'q', text:'PUNTI DI FORZA — cosa abbiamo di meglio rispetto ai concorrenti?', subs:[
@@ -1215,7 +1507,7 @@ const GUIDE_S6 = [
   {type:'note', text:'Ricorda: uno degli obiettivi della strategia è trasformare le minacce in opportunità. La precondizione è individuarle prima che il loro impatto sull\'impresa diventi irreversibile.'}
 ];
 
-const GUIDE_S7 = [
+const GUIDE_S8 = [
   {type:'section', text:'Clima Aziendale — Note per il facilitatore'},
   {type:'note', text:'Il questionario va somministrato ai dipendenti in forma ANONIMA per ottenere risposte autentiche. In alternativa può essere compilato dalla direzione come "stima" del clima percepito. I risultati alimentano la prospettiva Apprendimento & Crescita della BSC.'},
   {type:'q', text:'Come interpretare i risultati:', subs:[
@@ -1232,7 +1524,7 @@ const GUIDE_S7 = [
   ]}
 ];
 
-const GUIDE_S8 = [
+const GUIDE_S9 = [
   {type:'section', text:'Vision, Mission & Valori (5°/6° Incontro)'},
   {type:'q', text:'VISION — Dove vogliamo essere?', subs:[
     'La Vision deve contenere OBBLIGATORIAMENTE 3 elementi: OBIETTIVO + MISURA + TEMPO',
@@ -1263,7 +1555,7 @@ const GUIDE_S8 = [
   {type:'note', text:'Nike: "Ispirare e portare innovazione per ogni atleta del mondo" | Google Mission: "Organizzare le informazioni mondiali e renderle universalmente accessibili" | Technogym Vision: "Essere leader nel mondo come Wellness Solution Provider" | Azienda consulenza: Vision = "Leader nei servizi di consulenza finanziaria nella nostra città entro 3 anni" — Mission = "Essere il miglior partner dell\'imprenditore nel rapporto con le banche"'}
 ];
 
-const GUIDE_S9 = [
+const GUIDE_S10 = [
   {type:'section', text:'Balanced Scorecard — Mappa Strategica (7° Incontro)'},
   {type:'note', text:'La BSC traduce la strategia in azione attraverso parametri-obiettivo bilanciati che: A) sono collegati alla strategia come espressione di obiettivi strategici o FCS, B) non sono solo economico-finanziari, C) osservano la performance da più prospettive catturando anche le dimensioni intangibili.'},
   {type:'q', text:'💰 PROSPETTIVA FINANZIARIA — Come devo essere per soddisfare gli investitori?', subs:[
@@ -1373,8 +1665,10 @@ function init(){
   loadFromStorage();
   renderPestelAccordions();
   renderPorterForces();
+  renderFiliera();
   renderCatena();
   renderFCS();
+  renderGE();
   renderAll();
   updateProgress();
   updateAIStatusDot();
@@ -1385,13 +1679,14 @@ function init(){
   makeGuide('s1', GUIDE_S1);
   makeGuide('s2', GUIDE_S2);
   makeGuide('s3', GUIDE_S3);
-  makeGuide('s4', GUIDE_S4);
+  makeGuide('s4', GUIDE_S4_FILIERA);
   makeGuide('s5', GUIDE_S5);
   makeGuide('s6', GUIDE_S6);
   makeGuide('s7', GUIDE_S7);
   makeGuide('s8', GUIDE_S8);
   makeGuide('s9', GUIDE_S9);
   makeGuide('s10', GUIDE_S10);
+  makeGuide('s11', GUIDE_S11);
 }
 
 function renderAll(){
@@ -1428,6 +1723,7 @@ function renderAll(){
   renderVincoli();renderCritiche();
   // S5
   renderFCSValues();
+  renderGE();
   if(D.fcs.conclusioni) document.getElementById('fcs-concl').value=D.fcs.conclusioni;
   // S6
   renderSwot();
@@ -1454,7 +1750,9 @@ function go(n){
   document.querySelectorAll('.ni').forEach((ni,i)=>{ni.classList.toggle('active',i===n)});
   currentSec=n;
   if(n===3) setTimeout(()=>drawPorterChart(),100);
-  if(n===10) renderReport();
+  if(n===4) setTimeout(()=>renderFiliera(),100);
+  if(n===6) setTimeout(()=>{renderGE();},120);
+  if(n===11) renderReport();
   document.getElementById('ca').scrollTo({top:0,behavior:'smooth'});
   updateProgress();
 }
@@ -1474,7 +1772,14 @@ function save(){
   D.business.canali=v('b-ca');D.business.costi=v('b-co');D.business.ricavi=v('b-ri');
   // S3
   D.porter.conclusioni=v('porter-concl');
-  // S5
+  // S4 filiera
+  if(document.getElementById('fil-concl')) D.filiera.conclusioni=v('fil-concl')||'';
+  if(document.getElementById('fil-pu')) D.filiera.potereUpstream=parseInt(document.getElementById('fil-pu').value)||5;
+  if(document.getElementById('fil-pd')) D.filiera.potereDownstream=parseInt(document.getElementById('fil-pd').value)||5;
+  // S6 GE
+  if(document.getElementById('ge-concl')) D.ge.conclusioni=document.getElementById('ge-concl').value||'';
+  if(document.getElementById('ge-sbu-nome')) D.ge.sbuNome=document.getElementById('ge-sbu-nome').value||'';
+  // S5 (ora S6 FCS)
   D.fcs.conclusioni=v('fcs-concl')||'';
   // S6
   D.swot.so=v('sw-so');D.swot.wo=v('sw-wo');D.swot.st=v('sw-st');D.swot.wt=v('sw-wt');
@@ -1748,6 +2053,227 @@ function drawPorterChart(){
   }
 }
 
+// ===== FILIERA DI SETTORE =====
+let filieraChart = null;
+
+function renderFiliera(){
+  if(!D.filiera) D.filiera={fasi:[],potereUpstream:5,potereDownstream:5,conclusioni:''};
+  renderFilieraMap();
+  renderFilieraRows();
+  renderFilieraChart();
+  updateFilieraKPI();
+  updateFilieraPotere();
+  if(document.getElementById('fil-concl')) document.getElementById('fil-concl').value=D.filiera.conclusioni||'';
+  if(document.getElementById('fil-pu')){
+    document.getElementById('fil-pu').value=D.filiera.potereUpstream||5;
+    document.getElementById('fil-pd').value=D.filiera.potereDownstream||5;
+  }
+}
+
+function renderFilieraMap(){
+  const wrap=document.getElementById('fil-map-svg');
+  if(!wrap)return;
+  const fasi=D.filiera.fasi||[];
+  let html='<div class="fil-map-wrap">';
+  fasi.forEach((f,i)=>{
+    const cls=f.presidio||'no';
+    const valLabel=f.valore?f.valore+'% valore':'—';
+    const makeLabel=f.makeOrBuy==='make'?'🏠 Interno':'📦 Esterno';
+    const makeCls=f.makeOrBuy==='make'?'make':'buy';
+    html+=`<div class="fil-map-fase">
+      <div class="fil-map-box presidio-${cls}">${f.nome}</div>
+      <div class="fil-map-val">${valLabel}</div>
+      <div class="fil-map-make ${makeCls}">${makeLabel}</div>
+    </div>`;
+    if(i<fasi.length-1) html+='<div class="fil-map-arrow">▶</div>';
+  });
+  html+='</div>';
+  // Legenda
+  html+=`<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:11.5px">
+    <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#d1fae5;border:2px solid #10b981;vertical-align:middle;margin-right:4px"></span>Presidio completo</span>
+    <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#fef3c7;border:2px solid #f59e0b;vertical-align:middle;margin-right:4px"></span>Presidio parziale</span>
+    <span><span style="display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--g100);border:2px solid var(--g300);vertical-align:middle;margin-right:4px"></span>Non presidiata</span>
+    <span style="color:var(--nv);font-weight:600">🏠 Interno</span>
+    <span style="color:var(--g400)">📦 Esterno</span>
+  </div>`;
+  wrap.innerHTML=html;
+}
+
+function renderFilieraRows(){
+  const wrap=document.getElementById('fil-fasi-list');
+  if(!wrap)return;
+  const fasi=D.filiera.fasi||[];
+  if(fasi.length===0){wrap.innerHTML='<p style="color:var(--g400);font-size:13px;padding:10px 0">Nessuna fase configurata. Usa le fasi di default o aggiungi una fase personalizzata.</p>';return;}
+  wrap.innerHTML=fasi.map((f,i)=>{
+    const cls=f.presidio||'no';
+    return `<div class="fil-row presidio-${cls}">
+      <div>
+        <div class="fil-row-name">
+          <input type="text" value="${f.nome||''}" placeholder="Nome fase..." 
+            style="font-weight:600;font-size:13px;border:none;background:transparent;padding:0;width:100%;color:var(--nv)"
+            oninput="D.filiera.fasi[${i}].nome=this.value;debouncedFilieraUpdate()">
+        </div>
+        <input type="text" value="${f.attori||''}" placeholder="Attori chiave (es. Fornitori materie prime, Distribuzione GT...)"
+          style="font-size:11.5px;border:none;background:transparent;padding:0;width:100%;color:var(--g500);margin-top:4px"
+          oninput="D.filiera.fasi[${i}].attori=this.value;save()">
+      </div>
+      <div>
+        <label style="font-size:10px;font-weight:600;text-transform:uppercase;color:var(--g500);letter-spacing:.4px;display:block;margin-bottom:4px">Presidio</label>
+        <select style="font-size:12px;padding:5px 8px;border-radius:6px;border:1.5px solid var(--g200);width:100%" 
+          onchange="D.filiera.fasi[${i}].presidio=this.value;debouncedFilieraUpdate()">
+          <option value="pieno" ${f.presidio==='pieno'?'selected':''}>✅ Completo</option>
+          <option value="parziale" ${f.presidio==='parziale'?'selected':''}>⚡ Parziale</option>
+          <option value="no" ${f.presidio==='no'||!f.presidio?'selected':''}>⬜ Assente</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:10px;font-weight:600;text-transform:uppercase;color:var(--g500);letter-spacing:.4px;display:block;margin-bottom:4px">Make / Buy</label>
+        <select style="font-size:12px;padding:5px 8px;border-radius:6px;border:1.5px solid var(--g200);width:100%"
+          onchange="D.filiera.fasi[${i}].makeOrBuy=this.value;debouncedFilieraUpdate()">
+          <option value="make" ${f.makeOrBuy==='make'?'selected':''}>🏠 Interno</option>
+          <option value="buy" ${f.makeOrBuy==='buy'?'selected':''}>📦 Esterno</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:10px;font-weight:600;text-transform:uppercase;color:var(--g500);letter-spacing:.4px;display:block;margin-bottom:4px">Valore %</label>
+        <input type="number" min="0" max="100" value="${f.valore||0}" 
+          style="font-size:13px;font-weight:700;width:100%;text-align:center;padding:5px;border-radius:6px;border:1.5px solid var(--g200)"
+          oninput="D.filiera.fasi[${i}].valore=parseInt(this.value)||0;debouncedFilieraUpdate()">
+      </div>
+      <div>
+        <button class="btn btn-d btn-sm" onclick="removeFilieraFase(${i})" title="Rimuovi fase">✕</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+let _filieraTimer=null;
+function debouncedFilieraUpdate(){
+  clearTimeout(_filieraTimer);
+  _filieraTimer=setTimeout(()=>{
+    renderFilieraMap();
+    renderFilieraChart();
+    updateFilieraKPI();
+    save();
+  },300);
+}
+
+function renderFilieraChart(){
+  const ctx=document.getElementById('fil-chart');
+  if(!ctx)return;
+  const fasi=D.filiera.fasi||[];
+  if(filieraChart) filieraChart.destroy();
+  const labels=fasi.map(f=>f.nome||'—');
+  const valori=fasi.map(f=>f.valore||0);
+  const colors=fasi.map(f=>{
+    if(f.presidio==='pieno') return 'rgba(16,185,129,.85)';
+    if(f.presidio==='parziale') return 'rgba(245,158,11,.85)';
+    return 'rgba(209,213,219,.7)';
+  });
+  const borders=fasi.map(f=>{
+    if(f.presidio==='pieno') return '#059669';
+    if(f.presidio==='parziale') return '#d97706';
+    return '#9ca3af';
+  });
+  filieraChart=new Chart(ctx,{
+    type:'bar',
+    data:{
+      labels,
+      datasets:[{
+        label:'% Valore nella filiera',
+        data:valori,
+        backgroundColor:colors,
+        borderColor:borders,
+        borderWidth:2,
+        borderRadius:6,
+        borderSkipped:false
+      }]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:ctx=>`Valore: ${ctx.parsed.y}%`}}
+      },
+      scales:{
+        y:{beginAtZero:true,max:100,ticks:{callback:v=>v+'%',font:{size:11}},grid:{color:'rgba(0,0,0,.05)'}},
+        x:{ticks:{font:{size:11},maxRotation:30},grid:{display:false}}
+      }
+    }
+  });
+}
+
+function updateFilieraKPI(){
+  const fasi=D.filiera.fasi||[];
+  const tot=fasi.length;
+  // Fasi presidiate = pieno o parziale
+  const fasePres=fasi.filter(f=>f.presidio==='pieno'||f.presidio==='parziale');
+  const presidiate=fasePres.length;
+  // Integrazione verticale: % fasi presidiate sul totale
+  const intPerc=tot>0?Math.round(presidiate/tot*100):0;
+  // Valore presidiato: somma % valore delle fasi presidiate
+  const valPres=fasePres.reduce((s,f)=>s+(f.valore||0),0);
+  // Make vs Buy: conteggio SOLO sulle fasi presidiate (ha senso solo dove l'azienda decide)
+  const makeCount=fasePres.filter(f=>f.makeOrBuy==='make').length;
+  const makePerc=presidiate>0?Math.round(makeCount/presidiate*100):0;
+  // Totale % valore deve sommare 100 — avviso se non torna
+  const totValore=fasi.reduce((s,f)=>s+(f.valore||0),0);
+  const setKPI=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};
+  setKPI('fil-kpi-pres', presidiate);
+  setKPI('fil-kpi-pres-lbl', `su ${tot} totali`);
+  setKPI('fil-kpi-int', intPerc+'%');
+  setKPI('fil-kpi-val', valPres>0?valPres+'%':'—');
+  setKPI('fil-kpi-make', presidiate>0?makePerc+'%':'—');
+  // Avviso somma valore
+  const warnEl=document.getElementById('fil-warn-valore');
+  if(warnEl){
+    if(totValore!==100 && totValore>0){
+      warnEl.style.display='block';
+      warnEl.textContent='⚠ La somma dei valori % è '+totValore+'% (dovrebbe essere 100%)';
+    } else {
+      warnEl.style.display='none';
+    }
+  }
+}
+
+function updateFilieraPotere(){
+  const pu=parseInt(document.getElementById('fil-pu')?.value)||5;
+  const pd=parseInt(document.getElementById('fil-pd')?.value)||5;
+  const puVal=document.getElementById('fil-pu-val');
+  const pdVal=document.getElementById('fil-pd-val');
+  const puMsg=document.getElementById('fil-pu-msg');
+  const pdMsg=document.getElementById('fil-pd-msg');
+  if(puVal) puVal.textContent=pu;
+  if(pdVal) pdVal.textContent=pd;
+  const puLabels=['','Dipendenza totale dai fornitori','Alta dipendenza (pochi fornitori alternativi)','Alta dipendenza','Dipendenza moderata','Equilibrio moderato','Equilibrio con leggero vantaggio','Buon potere di negoziazione','Alto potere, condizioni favorevoli','Potere elevato','Potere totale: si dettano le condizioni'];
+  const pdLabels=['','I clienti dettano le condizioni','Alta pressione clienti (switching facile)','Forte pressione clienti','Potere clienti significativo','Equilibrio discreta capacità','Equilibrio — puoi dettare condizioni moderatamente','Buon controllo del canale','Alta fidelizzazione e barriere switching','Potere forte sui clienti','Posizione dominante — cliente dipende da te'];
+  if(puMsg) puMsg.textContent=puLabels[pu]||'';
+  if(pdMsg) pdMsg.textContent=pdLabels[pd]||'';
+  if(D.filiera){D.filiera.potereUpstream=pu;D.filiera.potereDownstream=pd;save();}
+}
+
+function addFilieraFase(){
+  if(!D.filiera) D.filiera={fasi:[],potereUpstream:5,potereDownstream:5,conclusioni:''};
+  D.filiera.fasi.push({nome:'Nuova Fase',presidio:'no',makeOrBuy:'buy',valore:0,attori:''});
+  renderFiliera();save();
+}
+
+function removeFilieraFase(i){
+  D.filiera.fasi.splice(i,1);
+  renderFiliera();save();
+}
+
+function resetFilieraDefault(){
+  D.filiera.fasi=[
+    {nome:'Fornitori / Mat. Prime',presidio:'no',makeOrBuy:'buy',valore:20,attori:''},
+    {nome:'Produzione / Trasform.',presidio:'pieno',makeOrBuy:'make',valore:30,attori:''},
+    {nome:'Logistica & Distrib.',presidio:'parziale',makeOrBuy:'buy',valore:15,attori:''},
+    {nome:'Vendita / Canale',presidio:'pieno',makeOrBuy:'make',valore:25,attori:''},
+    {nome:'Post Vendita / Servizi',presidio:'no',makeOrBuy:'buy',valore:10,attori:''}
+  ];
+  renderFiliera();save();toast('Fasi ripristinate','ok');
+}
+
 // ===== CATENA DEL VALORE =====
 function renderCatena(){
   renderCvRows('prim');renderCvRows('supp');
@@ -1950,6 +2476,238 @@ function selFCS(fi,ci){
 }
 
 function saveFcsRating(fi,ci,val){D.fcs.ratings[fi+'_'+ci]=parseInt(val);save()}
+
+
+
+// ===== GE-McKINSEY =====
+const GE_CELLS = [
+  // [zona, colore-sfondo, colore-bordo, strategia, descrizione]  — riga da basso (Y bassa) a alto (Y alta), col da sx (X bassa) a dx (X alta)
+  // Y alta (3 = riga 2, indice 0 in array = top-left della matrice = Y alta / X bassa)
+  [['Selettività','#fff7ed','#f97316','Proteggere, focalizzarsi','Alta forza ma settore poco attrattivo. Difendi le nicchie profittevoli, non disperdere risorse. Cerca adiacenze di mercato.'],
+   ['Crescita Selettiva','#fef9c3','#eab308','Investire nei punti di forza','Settore mediamente attrattivo, buona forza competitiva. Investi selettivamente dove l\'azienda eccelle.'],
+   ['Investimento e Crescita','#dcfce7','#22c55e','Investire e crescere aggressivamente','Settore attrattivo e forte posizione competitiva. Massimizzare gli investimenti per leadership di mercato.']],
+  // Y media
+  [['Mietitura / Abbandono','#fef2f2','#ef4444','Ridurre e ottimizzare','Settore poco attrattivo e posizione debole. Estrarre valore residuo, non reinvestire.'],
+   ['Selettività','#fff7ed','#f97316','Gestire per cash flow','Posizione e attrattività medie. Selezionare i segmenti migliori, ottimizzare i costi, proteggere la liquidità.'],
+   ['Crescita Selettiva','#fef9c3','#eab308','Costruire punti di forza','Settore attrattivo ma posizione media. Investire per rafforzare i vantaggi competitivi nei segmenti chiave.']],
+  // Y bassa
+  [['Mietitura / Abbandono','#fef2f2','#ef4444','Uscita progressiva','Doppia debolezza. Valutare uscita dal mercato o cessione dell\'attivit\u00e0.'],
+   ['Mietitura / Abbandono','#fef2f2','#ef4444','Ridurre esposizione','Settore medio, posizione debole. Ridurre investimenti, massimizzare cash flow residuo.'],
+   ['Selettività','#fff7ed','#f97316','Specializzarsi o uscire','Settore attrattivo ma posizione competitiva bassa. Scegliere un\'unica nicchia da presidiare o cedere.']],
+];
+
+function geScoreAxis(arr){
+  let tot=0,ptot=0;
+  arr.forEach(v=>{
+    const raw=v.v||3;
+    const val=v.inv?(6-raw):raw; // inverso: 5→1, 4→2, 3→3, 2→4, 1→5
+    tot+=val*(v.p/100);
+    ptot+=v.p;
+  });
+  return ptot>0?Math.round(tot*10)/10:3;
+}
+
+function geGetCell(scoreA,scoreC){
+  // scoreA e scoreC sono in range 1-5
+  // colonna X: 1-2.33→0(bassa), 2.33-3.67→1(media), 3.67-5→2(alta)
+  // riga Y: alta→riga 0, media→riga 1, bassa→riga 2
+  const col=scoreA<=2.33?0:scoreA<=3.67?1:2;
+  const row=scoreC>3.67?0:scoreC>=2.33?1:2;
+  return {row,col,cell:GE_CELLS[row][col]};
+}
+
+function renderGE(){
+  if(!D.ge) return;
+  renderGEVars();
+  updateGEScores();
+  if(document.getElementById('ge-sbu-nome')) document.getElementById('ge-sbu-nome').value=D.ge.sbuNome||'';
+  const geConcl=document.getElementById('ge-concl');
+  if(geConcl) geConcl.value=D.ge.conclusioni||'';
+}
+
+function renderGEVars(){
+  ['a','c'].forEach(axis=>{
+    const wrap=document.getElementById('ge-vars-'+axis);
+    if(!wrap)return;
+    const arr=D.ge[axis==='a'?'attrattivita':'capacita']||[];
+    wrap.innerHTML=arr.map((v,i)=>`
+      <div class="ge-var-row">
+        <div class="ge-var-lbl">${v.l}${v.inv?'<span class="ge-var-inv">↓ inv.</span>':''}</div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <input type="range" min="1" max="5" step="1" value="${v.v||3}"
+            style="width:70px;height:3px"
+            oninput="D.ge['${axis==='a'?'attrattivita':'capacita'}'][${i}].v=parseInt(this.value);updateGEScores();save()">
+          <span class="ge-var-score" id="ge-v-${axis}-${i}">${v.v||3}</span>
+        </div>
+        <div style="font-size:10px;color:var(--g400);text-align:right">${v.p}%</div>
+      </div>`).join('');
+  });
+}
+
+function updateGEScores(){
+  const sA=geScoreAxis(D.ge.attrattivita||[]);
+  const sC=geScoreAxis(D.ge.capacita||[]);
+  D.ge.scoreA=sA; D.ge.scoreC=sC;
+
+  // Aggiorna display valori slider
+  (D.ge.attrattivita||[]).forEach((v,i)=>{
+    const el=document.getElementById('ge-v-a-'+i);
+    if(el) el.textContent=v.v||3;
+  });
+  (D.ge.capacita||[]).forEach((v,i)=>{
+    const el=document.getElementById('ge-v-c-'+i);
+    if(el) el.textContent=v.v||3;
+  });
+
+  // Score box
+  const saEl=document.getElementById('ge-score-a');
+  const scEl=document.getElementById('ge-score-c');
+  if(saEl) saEl.textContent=sA.toFixed(2);
+  if(scEl) scEl.textContent=sC.toFixed(2);
+
+  // KPI
+  const levels=['','Bassa','Medio-Bassa','Media','Medio-Alta','Alta'];
+  const getLvl=s=>s<=2.33?'Bassa':s<=3.67?'Media':'Alta';
+  const setEl=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};
+  setEl('ge-kpi-a', getLvl(sA));
+  setEl('ge-kpi-c', getLvl(sC));
+
+  // Raccomandazione
+  const {row,col,cell}=geGetCell(sA,sC);
+  const recBox=document.getElementById('ge-rec-box');
+  const recTitle=document.getElementById('ge-rec-title');
+  const recDesc=document.getElementById('ge-rec-desc');
+  if(recBox&&recTitle&&recDesc){
+    recBox.style.borderColor=cell[2];
+    recBox.style.background=cell[1];
+    recTitle.textContent='📌 '+cell[0]+' — '+cell[3];
+    recTitle.style.color=cell[2]==='#22c55e'?'#15803d':cell[2]==='#eab308'?'#854d0e':cell[2]==='#f97316'?'#9a3412':'#b91c1c';
+    recDesc.textContent=cell[4];
+  }
+
+  drawGEMatrix(sA,sC,row,col);
+}
+
+function drawGEMatrix(sA,sC,row,col){
+  const canvas=document.getElementById('ge-canvas');
+  if(!canvas) return;
+  const dpr=window.devicePixelRatio||1;
+  const size=canvas.parentElement.clientWidth||400;
+  canvas.width=size*dpr;
+  canvas.height=size*dpr;
+  canvas.style.width=size+'px';
+  canvas.style.height=size+'px';
+  const ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+
+  const pad={top:32,right:24,bottom:56,left:56};
+  const W=size-pad.left-pad.right;
+  const H=size-pad.top-pad.bottom;
+  const cw=W/3; const ch=H/3;
+
+  // Colori celle (row=0 top=alta Y, col=0 left=bassa X)
+  const cellColors=[
+    ['#fff7ed','#fef9c3','#dcfce7'],
+    ['#fef2f2','#fff7ed','#fef9c3'],
+    ['#fef2f2','#fef2f2','#fff7ed']
+  ];
+  const cellLabels=[
+    [['Selettività'],['Crescita','Selettiva'],['Investimento','e Crescita']],
+    [['Mietitura'],['Selettività'],['Crescita','Selettiva']],
+    [['Mietitura'],['Mietitura'],['Selettività']]
+  ];
+  const cellBorders=[
+    ['#f97316','#eab308','#22c55e'],
+    ['#ef4444','#f97316','#eab308'],
+    ['#ef4444','#ef4444','#f97316']
+  ];
+
+  // Disegna celle
+  for(let r=0;r<3;r++){
+    for(let co=0;co<3;co++){
+      const x=pad.left+co*cw;
+      const y=pad.top+r*ch;
+      ctx.fillStyle=cellColors[r][co];
+      ctx.fillRect(x,y,cw,ch);
+      // Bordo celle
+      ctx.strokeStyle=r===row&&co===col?'#0f1f3d':'#e5e7eb';
+      ctx.lineWidth=r===row&&co===col?2.5:0.8;
+      ctx.strokeRect(x+0.5,y+0.5,cw-1,ch-1);
+      // Label cella
+      ctx.fillStyle='rgba(0,0,0,.45)';
+      ctx.font=`600 ${Math.round(cw*0.09)}px DM Sans,sans-serif`;
+      ctx.textAlign='center';
+      const lines=Array.isArray(cellLabels[r][co])?cellLabels[r][co]:[cellLabels[r][co]];
+      lines.forEach((ln,li)=>ctx.fillText(ln,x+cw/2,y+ch/2+(li-(lines.length-1)/2)*13+3));
+    }
+  }
+
+  // Etichette asse X (Bassa / Media / Alta)
+  const xLabels=['Bassa','Media','Alta'];
+  ctx.fillStyle='#6b7280';
+  ctx.font=`500 ${Math.round(cw*0.085)}px DM Sans,sans-serif`;
+  ctx.textAlign='center';
+  xLabels.forEach((lb,i)=>ctx.fillText(lb,pad.left+(i+0.5)*cw,pad.top+H+18));
+
+  // Etichette asse Y
+  const yLabels=['Alta','Media','Bassa'];
+  ctx.textAlign='right';
+  yLabels.forEach((lb,i)=>ctx.fillText(lb,pad.left-6,pad.top+(i+0.5)*ch+4));
+
+  // Titoli assi
+  ctx.fillStyle='#3b82f6';
+  ctx.font=`700 ${Math.round(cw*0.085)}px DM Sans,sans-serif`;
+  ctx.textAlign='center';
+  ctx.fillText('Attrattività del Settore →',pad.left+W/2,size-8);
+
+  ctx.save();
+  ctx.translate(14,pad.top+H/2);
+  ctx.rotate(-Math.PI/2);
+  ctx.fillStyle='#10b981';
+  ctx.fillText('← Capacità Competitiva',0,0);
+  ctx.restore();
+
+  // Bubble aziendale
+  // Converti score 1-5 in pixel: X = (sA-1)/4 * W, Y = (1-(sC-1)/4) * H
+  const bx=pad.left+((sA-1)/4)*W;
+  const by=pad.top+(1-(sC-1)/4)*H;
+  const br=Math.min(W,H)*0.09;
+
+  // Ombra bubble
+  ctx.shadowColor='rgba(15,31,61,.3)';
+  ctx.shadowBlur=10;
+  ctx.shadowOffsetY=3;
+
+  // Cerchio esterno (glow)
+  ctx.beginPath();
+  ctx.arc(bx,by,br+4,0,Math.PI*2);
+  ctx.fillStyle='rgba(15,31,61,.15)';
+  ctx.fill();
+
+  ctx.shadowBlur=0; ctx.shadowOffsetY=0;
+
+  // Cerchio principale
+  ctx.beginPath();
+  ctx.arc(bx,by,br,0,Math.PI*2);
+  ctx.fillStyle='#0f1f3d';
+  ctx.fill();
+  ctx.strokeStyle='#b8973a';
+  ctx.lineWidth=2.5;
+  ctx.stroke();
+
+  // Label azienda
+  const sbuName=(D.ge&&D.ge.sbuNome)||D.meta.azienda||'Azienda';
+  ctx.fillStyle='#fff';
+  ctx.font=`700 ${Math.round(br*0.55)}px DM Sans,sans-serif`;
+  ctx.textAlign='center';
+  ctx.fillText(sbuName.length>10?sbuName.slice(0,9)+'…':sbuName,bx,by+4);
+
+  // Coordinate numeriche
+  ctx.fillStyle='#0f1f3d';
+  ctx.font=`500 11px DM Sans,sans-serif`;
+  ctx.textAlign='center';
+  ctx.fillText('('+sA.toFixed(1)+', '+sC.toFixed(1)+')',bx,by+br+14);
+}
 
 
 // ===== SWOT =====
@@ -2776,6 +3534,39 @@ function renderReport(){
     ${hasVal(d.porter.conclusioni)?`<div style="background:var(--g50);border-radius:8px;padding:10px;font-size:13px;line-height:1.6">${escHtml(d.porter.conclusioni)}</div>`:''}
   </div>`;
 
+  // FILIERA DI SETTORE
+  const filieraFasi=(D.filiera&&D.filiera.fasi)||[];
+  if(filieraFasi.length>0){
+    html+=sezTitle('🏭','Filiera di Settore — Posizionamento Verticale');
+    // Mappa visiva testo
+    const mapText=filieraFasi.map(f=>{
+      const pBadge=f.presidio==='pieno'?'✅':f.presidio==='parziale'?'⚡':'⬜';
+      return `${pBadge} ${f.nome||''} (${f.valore||0}% val., ${f.makeOrBuy==='make'?'Interno':'Esterno'})`;
+    }).join(' → ');
+    html+=`<div class="card"><div style="font-size:12px;line-height:2;color:var(--g700);word-break:break-word">${mapText}</div></div>`;
+    // KPI filiera
+    const pres=filieraFasi.filter(f=>f.presidio==='pieno'||f.presidio==='parziale').length;
+    const valPres=filieraFasi.filter(f=>f.presidio==='pieno'||f.presidio==='parziale').reduce((s,f)=>s+(f.valore||0),0);
+    const intPerc=filieraFasi.length>0?Math.round(pres/filieraFasi.length*100):0;
+    const makePerc=filieraFasi.length>0?Math.round(filieraFasi.filter(f=>f.makeOrBuy==='make').length/filieraFasi.length*100):0;
+    html+=`<div class="card"><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center">
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${pres}/${filieraFasi.length}</div><div style="font-size:11px;color:var(--g500);margin-top:3px">Fasi Presidiate</div></div>
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${intPerc}%</div><div style="font-size:11px;color:var(--g500);margin-top:3px">Integrazione Verticale</div></div>
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${valPres}%</div><div style="font-size:11px;color:var(--g500);margin-top:3px">Valore Presidiato</div></div>
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${makePerc}%</div><div style="font-size:11px;color:var(--g500);margin-top:3px">Make (Interno)</div></div>
+    </div></div>`;
+    // Potere contrattuale
+    html+=`<div class="card"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--g500);letter-spacing:.5px;margin-bottom:6px">Potere Upstream (Fornitori)</div>
+        <div style="font-size:20px;font-weight:700;color:var(--nv)">${D.filiera.potereUpstream||5}<span style="font-size:12px;color:var(--g400)">/10</span></div></div>
+      <div><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:var(--g500);letter-spacing:.5px;margin-bottom:6px">Potere Downstream (Clienti)</div>
+        <div style="font-size:20px;font-weight:700;color:var(--nv)">${D.filiera.potereDownstream||5}<span style="font-size:12px;color:var(--g400)">/10</span></div></div>
+    </div></div>`;
+    if(D.filiera.conclusioni){
+      html+=`<div class="card"><div style="font-size:12.5px;line-height:1.7;color:var(--g700);white-space:pre-wrap">${escHtml(D.filiera.conclusioni)}</div></div>`;
+    }
+  }
+
   // CATENA DEL VALORE — FLOWCHART
   if(catenaHasAny){
     html+=sezTitle('🔗','Catena del Valore — Mappa dei Processi');
@@ -2886,6 +3677,35 @@ function renderReport(){
         </table></div>
       </div>`;
     });
+  }
+
+  // GE McKINSEY
+  if(D.ge&&(D.ge.scoreA||D.ge.scoreC)){
+    const sA=D.ge.scoreA||3;
+    const sC=D.ge.scoreC||3;
+    const getLvl=s=>s<=2.33?'Bassa':s<=3.67?'Media':'Alta';
+    const getCell=(sA,sC)=>{
+      const col=sA<=2.33?0:sA<=3.67?1:2;
+      const row=sC>3.67?0:sC>=2.33?1:2;
+      const zones=[['Selettività','Crescita Selettiva','Investimento e Crescita'],['Mietitura / Abbandono','Selettività','Crescita Selettiva'],['Mietitura / Abbandono','Mietitura / Abbandono','Selettività']];
+      const colors=[['#fff7ed','#fef9c3','#dcfce7'],['#fef2f2','#fff7ed','#fef9c3'],['#fef2f2','#fef2f2','#fff7ed']];
+      return {zona:zones[row][col],bg:colors[row][col]};
+    };
+    const {zona,bg}=getCell(sA,sC);
+    html+=sezTitle('🎯','Matrice GE-McKinsey');
+    html+=`<div class="card"><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;text-align:center;margin-bottom:16px">
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${sA.toFixed(2)}<span style="font-size:12px;color:var(--g400)">/5</span></div><div style="font-size:11px;color:var(--g500);text-transform:uppercase;letter-spacing:.4px;margin-top:3px">Attrattività Settore</div><div style="font-size:12px;font-weight:600;color:#3b82f6;margin-top:2px">${getLvl(sA)}</div></div>
+      <div style="background:${bg};border-radius:10px;padding:12px;display:flex;flex-direction:column;justify-content:center"><div style="font-size:15px;font-weight:700;color:var(--nv)">${zona}</div><div style="font-size:11px;color:var(--g500);margin-top:4px">Zona McKinsey</div></div>
+      <div><div style="font-size:22px;font-weight:700;color:var(--nv)">${sC.toFixed(2)}<span style="font-size:12px;color:var(--g400)">/5</span></div><div style="font-size:11px;color:var(--g500);text-transform:uppercase;letter-spacing:.4px;margin-top:3px">Capacità Competitiva</div><div style="font-size:12px;font-weight:600;color:#10b981;margin-top:2px">${getLvl(sC)}</div></div>
+    </div>`;
+    // Variabili attrattività
+    html+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">`;
+    html+=`<div><div style="font-size:11px;font-weight:700;color:#3b82f6;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Attrattività del Settore</div>`;
+    (D.ge.attrattivita||[]).forEach(v=>{const eff=v.inv?(6-v.v):v.v;html+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--g100);font-size:12px"><span style="color:var(--g600)">${v.l}</span><span style="font-weight:700;color:var(--nv)">${eff.toFixed(1)}/5</span></div>`;});
+    html+=`</div><div><div style="font-size:11px;font-weight:700;color:#10b981;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Capacità Competitiva</div>`;
+    (D.ge.capacita||[]).forEach(v=>{html+=`<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--g100);font-size:12px"><span style="color:var(--g600)">${v.l}</span><span style="font-weight:700;color:var(--nv)">${v.v}/5</span></div>`;});
+    html+=`</div></div></div>`;
+    if(D.ge.conclusioni){html+=`<div class="card"><div style="font-size:12.5px;line-height:1.7;color:var(--g700);white-space:pre-wrap">${escHtml(D.ge.conclusioni)}</div></div>`;}
   }
 
   // CLIMA AZIENDALE
@@ -3000,145 +3820,336 @@ async function aiSection(n){
   useBtn.style.display='none';copyBtn.style.display='none';
 
   const prompts={
-    1:`Sei un consulente strategico esperto. Analizza questa definizione del business e suggerisci miglioramenti, ampliamenti o nuovi segmenti da considerare. Rispondi in italiano.
+    1:(function(){
+      return `Sei un consulente strategico senior con 20 anni di esperienza in PMI italiane, specializzato nel modello Abell e nella definizione dell'identità competitiva. Analizza la definizione del business e fornisci un parere professionale critico e costruttivo. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI italiana'}
 SETTORE: ${D.meta.settore||'non specificato'}
-CHI serve: ${D.business.clienti.join(', ')||'non compilato'}
-COSA desiderano: ${D.business.funzioni.join(', ')||'non compilato'}
-COME (modalità): ${D.business.modalita.join(', ')||'non compilato'}
-Proposta di valore: ${D.business.propostaValore||'non compilata'}
+DIMENSIONI: ${D.meta.dimensioni||'non specificate'} — DIPENDENTI: ${D.meta.dipendenti||'n.d.'}
+CHI SERVE (segmenti): ${D.business.clienti.join(', ')||'non compilato'}
+COSA DESIDERANO (funzioni/bisogni): ${D.business.funzioni.join(', ')||'non compilato'}
+COME (modalità/tecnologie): ${D.business.modalita.join(', ')||'non compilato'}
+PROPOSTA DI VALORE: ${D.business.propostaValore||'non compilata'}
+VANTAGGIO COMPETITIVO: ${D.business.vantaggioCompetitivo||'non specificato'}
 
-Fornisci: 1) Valutazione della definizione attuale, 2) Possibili segmenti clienti non considerati, 3) Funzioni/bisogni emergenti nel settore, 4) Proposta di valore rafforzata (1-2 frasi).`,
+Fornisci:
+## 1. VALUTAZIONE ATTUALE
+Valuta la chiarezza e completezza della definizione del business. Cosa manca o è ambiguo?
 
-    2:`Sei un consulente strategico. Fai un'analisi PESTEL dettagliata per questa azienda italiana, identificando opportunità e minacce per ciascun fattore. Rispondi in italiano.
+## 2. SEGMENTI NON CONSIDERATI
+2-3 segmenti clienti ad alto potenziale non ancora presidiati, con motivazione.
+
+## 3. BISOGNI EMERGENTI
+Funzioni/bisogni dei clienti in crescita nel settore che l'azienda dovrebbe intercettare.
+
+## 4. PROPOSTA DI VALORE RAFFORZATA
+Riformula la proposta di valore in 2-3 frasi: clara, differenziante, orientata al cliente.
+
+## 5. RACCOMANDAZIONE OPERATIVA
+1 azione concreta da fare nei prossimi 90 giorni per rafforzare il posizionamento.`;
+    })(),
+
+    2:(function(){
+      return `Sei un consulente strategico senior specializzato in analisi macro-ambientale per PMI manifatturiere e di servizi italiane. Conduci un'analisi PESTEL professionale, concreta e orientata alla decisione. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI italiana'}
 SETTORE: ${D.meta.settore||'non specificato'}
-DIMENSIONI: ${D.meta.dimensioni||'PMI'}
+DIMENSIONI: ${D.meta.dimensioni||'PMI'} — SEDE: ${D.meta.sede||'Italia'}
+CLIENTI: ${D.business.clienti.join(', ')||'non specificati'}
 
-Per ciascuna area PESTEL (Politico, Economico, Sociale, Tecnologico, Ambientale, Legale) elenca 2-3 fattori specifici e rilevanti per questo settore, indicando se sono Opportunità o Minacce.`,
+Per ciascuna delle 6 aree PESTEL identifica 2-3 fattori specifici e rilevanti per questo settore. Per ogni fattore indica:
+- Descrizione sintetica
+- Classificazione: [O] Opportunità / [M] Minaccia
+- Dinamica: ↑ crescente / → stabile / ↓ decrescente
+- Urgenza: 🔴 Critico / 🟡 Rilevante / 🟢 Monitorare
 
-    3:`Sei un consulente strategico. Valuta le 5 Forze di Porter per questa azienda e suggerisci come gestire le pressioni competitive. Rispondi in italiano.
+## POLITICO
+## ECONOMICO
+## SOCIALE
+## TECNOLOGICO
+## AMBIENTALE
+## LEGALE
+
+## SCENARIO PIÙ PROBABILE (12-24 mesi)
+Sintesi in 3-4 righe: qual è la combinazione di fattori che avrà più impatto su questa azienda?
+
+## TOP 3 PRIORITÀ DI RISPOSTA
+Le 3 azioni strategiche più urgenti derivanti dall'analisi PESTEL.`;
+    })(),
+
+    3:(function(){
+      return `Sei un consulente senior di strategia competitiva, esperto nell'applicazione del modello di Porter alle PMI italiane. Analizza le 5 Forze con rigore professionale e fornisci indicazioni operative. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI italiana'}
-SETTORE: ${D.meta.settore||'non specificato'}
-CLIENTI principali: ${D.business.clienti.join(', ')||'non specificati'}
-
-Punteggi attuali (1-10):
-${PORTER_LABELS.map((l,i)=>`- ${l}: ${PORTER_KEYS[i]?D.porter[PORTER_KEYS[i]].vars.reduce((s,v)=>s+v.v,0)/D.porter[PORTER_KEYS[i]].vars.length:'-'}`).join('\n')}
-
-Commenta le forze più critiche e suggerisci strategie concrete.`,
-
-    4:`Sei un consulente di operations e management. Identifica le principali criticità nei processi della catena del valore e suggerisci soluzioni. Rispondi in italiano.
-
-AZIENDA: ${D.meta.azienda||'PMI italiana'}
-SETTORE: ${D.meta.settore||'non specificato'}
-PROCESSI: ${D.catena.primarie.map(p=>p.n+(p.c?' ('+p.c+')':'')).join('; ')}
-VINCOLI: ${D.catena.vincoli.join('; ')||'non specificati'}
-
-Per ogni area critica: 1) Problema, 2) Impatto sul cliente/business, 3) Soluzione pratica.`,
-
-    5:`Sei un consulente di strategia competitiva. Identifica i Fattori Critici di Successo (FCS) per questo settore e valuta il posizionamento competitivo. Rispondi in italiano.
-
 SETTORE: ${D.meta.settore||'non specificato'}
 CLIENTI: ${D.business.clienti.join(', ')||'non specificati'}
 PROPOSTA DI VALORE: ${D.business.propostaValore||'non specificata'}
-FCS già identificati: ${D.fcs.fattori.map(f=>f.nome).join(', ')||'nessuno'}
 
-Suggerisci 5-7 FCS specifici per il settore e per ciascuno spiega perché è critico.`,
+PUNTEGGI RILEVATI (1=bassa pressione, 10=alta pressione):
+${PORTER_LABELS.map((l,i)=>PORTER_KEYS[i]?'- '+l+': '+Math.round(D.porter[PORTER_KEYS[i]].vars.reduce((s,v)=>s+v.v,0)/D.porter[PORTER_KEYS[i]].vars.length*10)/10+'/10':null).filter(Boolean).join('\n')}
 
-    6:`Sei un consulente strategico. Basandoti sull'analisi SWOT, genera strategie concrete di risposta. Rispondi in italiano.
+## FORZA PIÙ CRITICA
+Identifica la forza con punteggio più alto e spiega perché rappresenta il rischio maggiore.
+
+## ANALISI DELLE 5 FORZE
+Per ciascuna forza: giudizio sintetico + 1 azione difensiva o differenziante concreta.
+
+## STRUTTURA COMPETITIVA DEL SETTORE
+In 3-4 righe: come si combina l'insieme delle forze e qual è il livello di attrattività del settore?
+
+## STRATEGIA COMPETITIVA RACCOMANDATA
+Tra Differenziazione, Leadership di Costo e Focus: quale si addice di più e perché?
+
+## 3 AZIONI PRIORITARIE (con orizzonte temporale)`;
+    })(),
+
+    4:(function(){
+      var fasi=(D.filiera&&D.filiera.fasi||[]).map(function(f){
+        return f.nome+' [Presidio: '+f.presidio+', '+(f.makeOrBuy==='make'?'Interno':'Esterno')+', Valore: '+(f.valore||0)+'%]';
+      }).join(' → ');
+      return `Sei un consulente senior di strategia aziendale con specializzazione in analisi di filiera, integrazione verticale e decisioni make-or-buy per PMI italiane. Rispondi in italiano.
+
+AZIENDA: ${D.meta.azienda||'PMI italiana'}
+SETTORE: ${D.meta.settore||'non specificato'}
+MAPPA FILIERA: ${fasi||'non configurata'}
+POTERE UPSTREAM (verso fornitori): ${D.filiera&&D.filiera.potereUpstream||5}/10
+POTERE DOWNSTREAM (verso clienti): ${D.filiera&&D.filiera.potereDownstream||5}/10
+
+## 1. DIAGNOSI DEL POSIZIONAMENTO
+Dove si concentra il potere nella filiera? Dove cattura o perde margine questa azienda?
+
+## 2. FASI CRITICHE
+Quali fasi non presidiate creano dipendenza, rischio o perdita di margine?
+
+## 3. ANALISI MAKE vs BUY
+Per ogni attività esternalizzata: conviene internalizzare? Pro, contro, soglia dimensionale.
+
+## 4. OPPORTUNITÀ STRATEGICHE
+Integrazione verticale a monte/valle, accordi strategici, partnership di filiera.
+
+## 5. PIANO D'AZIONE
+Top 3 priorità con orizzonte: entro 6 mesi / 12 mesi / 24 mesi.`;
+    })(),
+
+    5:(function(){
+      return `Sei un consulente senior di operations e organizzazione aziendale. Analizza la catena del valore e identifica vincoli, inefficienze e opportunità di miglioramento. Rispondi in italiano.
+
+AZIENDA: ${D.meta.azienda||'PMI italiana'}
+SETTORE: ${D.meta.settore||'non specificato'}
+PROCESSI PRIMARI: ${D.catena.primarie.map(function(p){return p.n+(p.c?' (criticità: '+p.c+')':'');}).join('; ')||'non compilati'}
+ATTIVITÀ DI SUPPORTO: ${D.catena.supporto.map(function(p){return p.n+(p.c?' ('+p.c+')':'');}).join('; ')||'non compilate'}
+VINCOLI RILEVATI: ${D.catena.vincoli.join('; ')||'non specificati'}
+ATTIVITÀ CRITICHE DI VALORE: ${D.catena.critiche.join('; ')||'non specificate'}
+
+## 1. COLLO DI BOTTIGLIA PRINCIPALE
+Identifica il vincolo che limita maggiormente la performance dell'intera catena.
+
+## 2. TOP 5 INEFFICIENZE
+Per ciascuna: Processo → Problema → Impatto su cliente/margine → Soluzione pratica.
+
+## 3. ATTIVITÀ A VALORE vs SPRECO
+Classifica le attività: Alto Valore / Semi-Valore / Da eliminare.
+
+## 4. QUICK WINS (entro 90 giorni)
+3 miglioramenti rapidi con impatto immediato su efficienza o qualità.
+
+## 5. INVESTIMENTI STRUTTURALI
+2-3 interventi di medio periodo (6-18 mesi) che migliorano la competitività strutturale.`;
+    })(),
+
+    6:(function(){
+      const sA=(D.ge&&D.ge.scoreA)||3;
+      const sC=(D.ge&&D.ge.scoreC)||3;
+      const getLvl=function(s){return s<=2.33?'Bassa':s<=3.67?'Media':'Alta';};
+      const getZona=function(a,b){
+        const col=a<=2.33?0:a<=3.67?1:2;
+        const row=b>3.67?0:b>=2.33?1:2;
+        return [['Selettività','Crescita Selettiva','Investimento e Crescita'],
+                ['Mietitura/Abbandono','Selettività','Crescita Selettiva'],
+                ['Mietitura/Abbandono','Mietitura/Abbandono','Selettività']][row][col];
+      };
+      const varA=(D.ge.attrattivita||[]).map(function(v){return v.l+': '+(v.inv?(6-v.v):v.v)+'/5 (peso '+v.p+'%)';}).join('; ');
+      const varC=(D.ge.capacita||[]).map(function(v){return v.l+': '+v.v+'/5 (peso '+v.p+'%)';}).join('; ');
+      const fcsTop=(D.fcs&&D.fcs.fattori||[]).slice(0,5).map(function(f){return f.fcs||f.nome;}).join(', ');
+      return 'Sei un consulente senior di strategia aziendale con 20 anni di esperienza nella pianificazione strategica di PMI italiane e nell\'applicazione della matrice GE-McKinsey. Rispondi in italiano.\n\n'+
+        'AZIENDA: '+(D.meta.azienda||'PMI')+' — SETTORE: '+(D.meta.settore||'n.d.')+'\n'+
+        'DIPENDENTI: '+(D.meta.dipendenti||'n.d.')+' — FATTURATO: '+(D.meta.fatturatoRange||'n.d.')+'\n'+
+        'FCS RILEVATI: '+(fcsTop||'n.d.')+'\n\n'+
+        'SCORE ATTRATTIVITÀ SETTORE: '+sA.toFixed(2)+'/5 ('+getLvl(sA)+')\n'+
+        'Variabili: '+varA+'\n\n'+
+        'SCORE CAPACITÀ COMPETITIVA: '+sC.toFixed(2)+'/5 ('+getLvl(sC)+')\n'+
+        'Variabili: '+varC+'\n\n'+
+        'ZONA McKINSEY: '+getZona(sA,sC)+'\n\n'+
+        '## 1. SINTESI POSIZIONAMENTO\n'+
+        'Spiega cosa significa questa zona per questa specifica azienda e settore (non risposta generica).\n\n'+
+        '## 2. ANALISI ATTRATTIVITÀ\n'+
+        'Variabili che abbassano il punteggio: perché e come si potrebbe migliorare l\'esposizione.\n\n'+
+        '## 3. ANALISI CAPACITÀ COMPETITIVA\n'+
+        'Punti deboli interni: cause probabili e leve di rafforzamento.\n\n'+
+        '## 4. STRATEGIA RACCOMANDATA\n'+
+        '3 priorità concrete per i prossimi 12 mesi coerenti con la zona McKinsey.\n\n'+
+        '## 5. RISCHI PRINCIPALI\n'+
+        'I 2-3 rischi più rilevanti derivanti da questo posizionamento e come mitigarli.\n\n'+
+        '## 6. CONFRONTO FCS vs CAPACITÀ\n'+
+        'Su quali FCS l\'azienda è forte o debole rispetto a ciò che il mercato richiede?';
+    })(),
+
+    7:(function(){
+      return `Sei un consulente senior di strategia aziendale con esperienza ventennale in pianificazione strategica per PMI italiane. Basandoti sull'analisi SWOT, genera strategie concrete, realistiche e prioritizzate. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI'}
 SETTORE: ${D.meta.settore||'non specificato'}
+DIPENDENTI: ${D.meta.dipendenti||'n.d.'} — FATTURATO: ${D.meta.fatturatoRange||'n.d.'}
+
 PUNTI DI FORZA: ${D.swot.S.join('; ')||'non specificati'}
 DEBOLEZZE: ${D.swot.W.join('; ')||'non specificate'}
 OPPORTUNITÀ: ${D.swot.O.join('; ')||'non specificate'}
 MINACCE: ${D.swot.T.join('; ')||'non specificate'}
 
-Genera 4 strategie concrete:
-SO (Offensiva): come usare i punti di forza per cogliere le opportunità
-WO (Inversione): come superare le debolezze sfruttando le opportunità
-ST (Difensiva): come usare le forze per mitigare le minacce
-WT (Sopravvivenza): come ridurre esposizione a debolezze e minacce`,
+## STRATEGIA SO — OFFENSIVA (Forze × Opportunità)
+Come sfruttare i punti di forza per cogliere le opportunità. Max 3 azioni concrete.
 
-    7:(function(){
+## STRATEGIA WO — INVERSIONE (Debolezze × Opportunità)
+Come superare i punti deboli sfruttando le opportunità esterne. Max 3 azioni concrete.
+
+## STRATEGIA ST — DIFENSIVA (Forze × Minacce)
+Come usare i punti di forza per difendersi dalle minacce. Max 3 azioni concrete.
+
+## STRATEGIA WT — SOPRAVVIVENZA (Debolezze × Minacce)
+Come ridurre l'esposizione alle debolezze e alle minacce. Max 3 azioni concrete.
+
+## PRIORITÀ ASSOLUTA
+Qual è la singola azione più importante da intraprendere nei prossimi 90 giorni e perché?`;
+    })(),
+
+    8:(function(){
       var ci = window._climaImportato;
       if(!ci || !ci.stats_per_dimensione){
-        return 'Sei uno psicologo del lavoro esperto in clima organizzativo per PMI italiane.'+
-          ' AZIENDA: '+(D.meta.azienda||'PMI')+' SETTORE: '+(D.meta.settore||'non specificato')+'.'+
-          ' Fornisci nel formato esatto:\n\n### DIAGNOSI\n[3-4 righe]\n\n### AZIONI MANAGEMENT\n1. ...\n2. ...\n3. ...\n4. ...\n5. ...\n\n### AZIONI DIPENDENTI\n1. ...\n2. ...\n3. ...\n\n### SWOT\nFORZE: ...\nDEBOLEZZE: ...\nMINACCE: ...\n\nRispondi in italiano.';
+        return 'Sei uno psicologo del lavoro e consulente organizzativo senior con 20 anni di esperienza in PMI italiane. Non hai dati survey disponibili per questa azienda.\n\n'+
+          'AZIENDA: '+(D.meta.azienda||'PMI')+'\nSETTORE: '+(D.meta.settore||'non specificato')+'\nDIPENDENTI: '+(D.meta.dipendenti||'n.d.')+'\n\n'+
+          'Fornisci una guida operativa per avviare un\'analisi del clima organizzativo:\n\n'+
+          '## PERCHÉ MISURARE IL CLIMA\nPerché è strategico per questa tipologia di azienda.\n\n'+
+          '## SEGNALI DA OSSERVARE\n5 indicatori comportamentali che anticipano problemi di clima.\n\n'+
+          '## COME SOMMINISTRARE LA SURVEY\nModalità, timing, garanzia di anonimato, comunicazione ai dipendenti.\n\n'+
+          '## COSA FARE SUBITO\n3 azioni che il management può fare oggi per migliorare il clima, a prescindere dalla survey.\n\nRispondi in italiano.';
       }
       var s = ci.stats_per_dimensione;
       var fl = ci.distribuzione_flow || {FLOW:{n:0,pct:0},STRESS:{n:0,pct:0},COMFORT:{n:0,pct:0},APATIA:{n:0,pct:0}};
       var attr = ci.rischio_attrition ? ci.rischio_attrition.pct : 0;
       var dimLines = Object.entries(s).map(function(e){
-        var v=e[1]; return '  - '+e[0]+': '+(v!==null?Number(v).toFixed(2):'n/d')+'/5 ('+(v>=4?'OTTIMO':v>=3?'SUFFICIENTE':'CRITICO')+')';
+        var v=e[1];
+        var lvl = v===null?'n/d':v>=4?'🟢 OTTIMO':v>=3?'🟡 SUFFICIENTE':'🔴 CRITICO';
+        return '  • '+e[0]+': '+(v!==null?Number(v).toFixed(2):'n/d')+'/5 — '+lvl;
       }).join('\n');
-      return 'Sei uno psicologo del lavoro esperto in clima organizzativo per PMI italiane (10-100 dipendenti).'+
-        ' Analizza questi dati REALI di survey anonima. Rispondi SOLO in italiano.\n\n'+
+      var segDom = Object.entries(fl).sort(function(a,b){return b[1].n-a[1].n;})[0];
+      return 'Sei uno psicologo del lavoro e consulente organizzativo senior con 20 anni di esperienza in clima aziendale e sviluppo organizzativo per PMI italiane (modelli JD-R, Maslach, Csikszentmihalyi). '+
+        'Analizza questi dati REALI di survey anonima con rigore scientifico e praticità manageriale. Rispondi SOLO in italiano.\n\n'+
         'AZIENDA: '+(D.meta.azienda||ci.azienda_id||'PMI')+'\n'+
         'SETTORE: '+(D.meta.settore||'non specificato')+'\n'+
+        'DIPENDENTI: '+(D.meta.dipendenti||'n.d.')+'\n'+
         'N. RISPOSTE: '+ci.n_risposte+' dipendenti\n\n'+
-        'DISTRIBUZIONE CLIMA:\n'+
-        '  FLOW (coinvolti e motivati): '+fl.FLOW.n+' persone ('+fl.FLOW.pct+'%)\n'+
-        '  STRESS (sovraccarichi, carico > risorse): '+fl.STRESS.n+' persone ('+fl.STRESS.pct+'%)\n'+
-        '  COMFORT (sottoutilizzati, risorse > carico): '+fl.COMFORT.n+' persone ('+fl.COMFORT.pct+'%)\n'+
-        '  APATIA (disconnessi): '+fl.APATIA.n+' persone ('+fl.APATIA.pct+'%)\n'+
-        '  RISCHIO ATTRITION: '+attr+'%\n\n'+
-        'PUNTEGGI DIMENSIONI (scala 1-5, domande negative gia invertite):\n'+dimLines+'\n\n'+
-        'Fornisci ESATTAMENTE questo formato (rispetta i ### come separatori):\n\n'+
+        'DISTRIBUZIONE SEGMENTI CLIMA:\n'+
+        '  🟢 FLOW (coinvolti e motivati — alta sfida + alte risorse): '+fl.FLOW.n+' persone ('+fl.FLOW.pct+'%)\n'+
+        '  🔴 STRESS (sovraccarico — alta sfida + basse risorse): '+fl.STRESS.n+' persone ('+fl.STRESS.pct+'%)\n'+
+        '  🟡 COMFORT (sottoutilizzati — bassa sfida + alte risorse): '+fl.COMFORT.n+' persone ('+fl.COMFORT.pct+'%)\n'+
+        '  ⚫ APATIA (disconnessi — bassa sfida + basse risorse): '+fl.APATIA.n+' persone ('+fl.APATIA.pct+'%)\n'+
+        '  ⚠️ RISCHIO ATTRITION (potenziale inespresso): '+attr+'%\n\n'+
+        'SEGMENTO DOMINANTE: '+segDom[0]+' ('+segDom[1].n+' persone)\n\n'+
+        'PUNTEGGI PER DIMENSIONE (scala 1-5, inversioni già applicate):\n'+dimLines+'\n\n'+
+        'Fornisci ESATTAMENTE questo formato (rispetta i ### come separatori di sezione):\n\n'+
         '### DIAGNOSI\n'+
-        '[3-4 righe: lettura psicologica reale, usa i numeri concreti di persone, descrivi il pattern principale]\n\n'+
+        '[4-5 righe: lettura psicologica professionale, usa i numeri reali, descrivi il pattern organizzativo principale, nomina le dimensioni critiche con i valori]\n\n'+
+        '### DIMENSIONI CRITICHE\n'+
+        '[Elenca le dimensioni sotto 3.0 con analisi causa-effetto: cosa genera questo punteggio? Quali comportamenti organizzativi ne sono responsabili?]\n\n'+
         '### AZIONI MANAGEMENT\n'+
-        '1. [Urgente - da fare entro 30 giorni]\n'+
-        '2. [Tattica - entro 90 giorni]\n'+
-        '3. [Strutturale - entro 6 mesi]\n'+
-        '4. [Comunicazione interna - cosa e come comunicare ai dipendenti]\n'+
-        '5. [KPI da monitorare per misurare il miglioramento]\n\n'+
+        '1. [URGENTE entro 30 giorni — azione specifica]\n'+
+        '2. [TATTICA entro 90 giorni — azione specifica]\n'+
+        '3. [STRUTTURALE entro 6 mesi — azione specifica]\n'+
+        '4. [COMUNICAZIONE — cosa e come comunicare ai dipendenti i risultati]\n'+
+        '5. [KPI di monitoraggio — cosa misurare per verificare il miglioramento]\n\n'+
         '### AZIONI DIPENDENTI\n'+
         '1. [Iniziativa partecipativa concreta]\n'+
-        '2. [Strumento di supporto individuale]\n'+
-        '3. [Azione di team building o coesione]\n\n'+
-        '### SWOT\n'+
-        'FORZE: [dimensioni con score >= 4.0 da inserire come punto di forza]\n'+
-        'DEBOLEZZE: [dimensioni critiche < 3.0 e percentuale stress]\n'+
-        'MINACCE: [rischio attrition e apatia]';
+        '2. [Strumento di supporto o sviluppo individuale]\n'+
+        '3. [Azione di coesione o riconoscimento]\n\n'+
+        '### MESSAGGIO PER L\'IMPRENDITORE\n'+
+        '[3-4 righe in linguaggio non tecnico: cosa sta succedendo davvero in azienda e cosa fare]\n\n'+
+        '### SWOT CLIMA\n'+
+        'FORZE: [dimensioni >= 4.0 — punti di forza organizzativi]\n'+
+        'DEBOLEZZE: [dimensioni < 3.0 e pattern critici]\n'+
+        'OPPORTUNITÀ: [leve di miglioramento concrete]\n'+
+        'MINACCE: [rischi di attrition, burnout, disengagement]';
     })(),
 
-    8:`Sei un consulente strategico specializzato in identità aziendale. Genera Vision, Mission e Valori per questa azienda. Rispondi in italiano.
+    9:(function(){
+      return `Sei un consulente senior specializzato in identità strategica e pianificazione a lungo termine per PMI italiane, con esperienza ventennale in processi di Vision & Mission con il management. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI italiana'}
 SETTORE: ${D.meta.settore||'non specificato'}
+DIPENDENTI: ${D.meta.dipendenti||'n.d.'} — FATTURATO: ${D.meta.fatturatoRange||'n.d.'}
+SEDE: ${D.meta.sede||'Italia'}
 CHI SERVE: ${D.business.clienti.join(', ')||'non specificato'}
 PROPOSTA DI VALORE: ${D.business.propostaValore||'non specificata'}
 VANTAGGIO COMPETITIVO: ${D.business.vantaggioCompetitivo||'non specificato'}
 PUNTI DI FORZA: ${D.swot.S.join(', ')||'non specificati'}
+OPPORTUNITÀ: ${D.swot.O.join(', ')||'non specificate'}
 
-Genera:
-1. VISION (1-2 frasi, ambiziosa, a 5-10 anni)
-2. MISSION (2-3 frasi, cosa fa + per chi + come + perché è diversa)  
-3. VALORI AZIENDALI (5-7 valori con breve spiegazione)
-4. OBIETTIVI STRATEGICI (3-5 obiettivi misurabili con KPI e orizzonte)`,
+## VISION (orizzonte 5-10 anni)
+Una frase ambiziosa, ispirazionale e misurabile. Deve rispondere: "Dove vogliamo essere tra 10 anni?"
+Proponi 2 varianti: una più quantitativa, una più valoriale.
 
-    9:`Sei un esperto di Balanced Scorecard e controllo strategico. Popola la mappa strategica BSC per questa azienda. Rispondi in italiano.
+## MISSION
+2-3 frasi che rispondono: Cosa facciamo? Per chi? Come? Perché siamo diversi?
+Deve essere operativa, non retorica.
+
+## VALORI AZIENDALI (5-7 valori)
+Per ciascun valore: nome + definizione di 1 riga + 1 comportamento concreto atteso.
+
+## OBIETTIVI STRATEGICI (3-5 anni)
+3-5 obiettivi misurabili, con KPI e orizzonte temporale. Devono essere sfidanti ma realistici.
+
+## NOTE DI FACILITAZIONE
+3 domande che il consulente può fare all'imprenditore per validare o affinare Vision e Mission con il team.`;
+    })(),
+
+    10:(function(){
+      return `Sei un esperto senior di Balanced Scorecard e controllo strategico per PMI italiane, con esperienza ventennale nell'implementazione della metodologia Kaplan & Norton. Rispondi in italiano.
 
 AZIENDA: ${D.meta.azienda||'PMI italiana'}
 SETTORE: ${D.meta.settore||'non specificato'}
+DIPENDENTI: ${D.meta.dipendenti||'n.d.'} — FATTURATO: ${D.meta.fatturatoRange||'n.d.'}
 VISION: ${D.vision.vision||'non specificata'}
-OBIETTIVI: ${D.vision.obiettivi.map(o=>o.testo).join('; ')||'non specificati'}
+MISSION: ${D.vision.mission||'non specificata'}
+OBIETTIVI STRATEGICI: ${D.vision.obiettivi.map(function(o){return o.testo+(o.kpi?' [KPI: '+o.kpi+']':'')+(o.orizzonte?' ['+o.orizzonte+']':'');}).join('; ')||'non specificati'}
 STRATEGIE SWOT: ${[D.swot.so,D.swot.wo,D.swot.st,D.swot.wt].filter(Boolean).join(' | ')||'non specificate'}
+PUNTI DI FORZA: ${D.swot.S.join('; ')||'n.d.'}
+DEBOLEZZE: ${D.swot.W.join('; ')||'n.d.'}
 
-Per ciascuna delle 4 prospettive BSC, suggerisci 3-4 obiettivi con KPI e target realistici:
+Per ciascuna delle 4 prospettive BSC, fornisci 3-4 obiettivi strategici:
 
-FINANZIARIA: obiettivi economico-finanziari
-CLIENTE: acquisizione, fidelizzazione, soddisfazione
-PROCESSI INTERNI: efficienza, qualità, innovazione
-APPRENDIMENTO & CRESCITA: formazione, digitalizzazione, clima`
+## PROSPETTIVA FINANZIARIA
+[Come dobbiamo apparire agli azionisti/imprenditore?]
+Per ogni obiettivo: Obiettivo | KPI | Target 3 anni | Azione principale
+
+## PROSPETTIVA CLIENTE
+[Come dobbiamo apparire ai clienti?]
+Per ogni obiettivo: Obiettivo | KPI | Target | Azione principale
+
+## PROSPETTIVA PROCESSI INTERNI
+[In quali processi dobbiamo eccellere?]
+Per ogni obiettivo: Obiettivo | KPI | Target | Azione principale
+
+## PROSPETTIVA APPRENDIMENTO & CRESCITA
+[Come sviluppiamo e sosteniamo la capacità di cambiare?]
+Per ogni obiettivo: Obiettivo | KPI | Target | Azione principale
+
+## MAPPA DELLE RELAZIONI CAUSALI
+In 4-5 righe: come si collegano gli obiettivi delle 4 prospettive (Apprendimento→Processi→Cliente→Finanziaria)?
+
+## 3 KPI PRIORITARI DA MONITORARE SUBITO`;
+    })()
   };
 
-  const sectionNames=['Setup','Definizione Business','PESTEL','5 Forze Porter','Catena del Valore','FCS & Posizionamento','SWOT','Clima Aziendale','Vision & Mission','Balanced Scorecard'];
+  const sectionNames=['Setup','Definizione Business','Analisi PESTEL','5 Forze di Porter','Filiera di Settore','Catena del Valore','FCS & Posizionamento','Analisi SWOT','Clima Aziendale','Vision, Mission & Valori','Balanced Scorecard','Report Strategico'];
   ctxEl.textContent=`📍 Analisi per: ${sectionNames[n]||'Sezione '+n}`;
   conEl.innerHTML=`<div class="ai-load"><div class="spin"></div>Elaborazione in corso...</div>`;
 
@@ -3688,6 +4699,7 @@ function updateProgress(){
     D.business.clienti.length>0?1:0,
     Object.values(D.pestel).some(p=>p.items&&p.items.length>0)?1:0,
     1,
+    (D.filiera&&D.filiera.fasi&&D.filiera.fasi.length>0)?1:0,
     D.catena.vincoli.length||D.catena.critiche.length?1:0,
     D.fcs.fattori.length>0?1:0,
     D.swot.S.length||D.swot.W.length||D.swot.O.length||D.swot.T.length?1:0,
@@ -3697,12 +4709,12 @@ function updateProgress(){
     0
   ];
   const done=scores.reduce((s,v)=>s+v,0);
-  const pct=Math.round(done/10*100);
+  const pct=Math.round(done/11*100);
   document.getElementById('prog-pct').textContent=pct+'%';
   document.getElementById('prog-fill').style.width=pct+'%';
   // Mark nav items
   document.querySelectorAll('.ni').forEach((ni,i)=>{
-    if(i>0&&i<10) ni.classList.toggle('done',scores[i]===1&&i!==currentSec);
+    if(i>0&&i<11) ni.classList.toggle('done',scores[i]===1&&i!==currentSec);
   });
 }
 
